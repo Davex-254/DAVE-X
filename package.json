@@ -35,7 +35,7 @@
     "@vitalets/google-translate-api": "^9.2.1",
     "@vitejs/plugin-react": "^5.1.4",
     "@whiskeysockets/baileys": "^7.0.0-rc.9",
-    "adm-zip": "^0.5.16",
+    "adm-zip": "*",
     "awesome-phonenumber": "^5.9.0",
     "axios": "^1.8.4",
     "better-sqlite3": "^12.6.2",
