@@ -1,6 +1,6 @@
 const axios = require('axios');
 const mumaker = require('mumaker');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 const channelInfo = {};
 

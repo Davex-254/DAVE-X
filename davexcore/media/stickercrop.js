@@ -2,10 +2,10 @@ const { downloadMediaMessage } = require('@whiskeysockets/baileys');
 const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const settings = require('../../settings');
+const settings = require('../../daveset');
 const webp = require('node-webpmux');
 const crypto = require('crypto');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function stickercropCommand(sock, chatId, message) {
     // The message that will be quoted in the reply.
@@ -93,7 +93,7 @@ async function stickercropCommand(sock, chatId, message) {
         // Create metadata
         const json = {
             'sticker-pack-id': crypto.randomBytes(32).toString('hex'),
-            'sticker-pack-name': settings.packname || 'Dave-X',
+            'sticker-pack-name': settings.packname || 'Issah-X',
             'emojis': ['✂️']
         };
 

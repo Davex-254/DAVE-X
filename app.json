@@ -1,9 +1,9 @@
 {
-  "name": "Dave x",
-  "description": "Dave x, your friendly assistant bot with nodejs!",
+  "name": "Dave-md",
+  "description": "Davex your friendly assistant bot with nodejs!",
   "logo": "https://h.uguu.se/GiYWpWoC.jpg",
   "keywords": [],
-  "repository": "https://github.com/Davex-254/DAVE-X",
+  "repository": "https://github.com/Davex254/DAVE-X",
   "stack": "container",
   "addons": [
     {
@@ -15,7 +15,7 @@
   },
 "env": {
   "SESSION_ID": {
-    "description": "Must begin with 'DAVE-AI:~'.",
+    "description": "Must begin with 'ISSA-AI:~'.",
     "value": "",
     "required": true
   }

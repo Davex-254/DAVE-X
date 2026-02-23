@@ -1,7 +1,7 @@
 const axios = require('axios');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
-async function bardCommand(sock, chatId, message) {
+async function birdCommand(sock, chatId, message) {
     const fake = createFakeContact(message);
     const botName = getBotName();
     

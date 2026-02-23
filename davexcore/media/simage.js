@@ -4,7 +4,7 @@ const fse = require('fs-extra');
 const path = require('path');
 const webp = require('webp-converter');
 const { downloadContentFromMessage } = require('@whiskeysockets/baileys');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 const tempDir = './temp';
 if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir);

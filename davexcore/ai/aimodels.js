@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 // Helper function to try multiple APIs
 async function tryAPIs(apis) {

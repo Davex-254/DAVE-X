@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function qcCommand(sock, chatId, message, text, prefix) {
     try {
         const fake = createFakeContact(message);

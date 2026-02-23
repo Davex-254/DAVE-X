@@ -1,5 +1,5 @@
 const yts = require('yt-search');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function ytsCommand(sock, chatId, senderId, message, userMessage) {
     const fkontak = createFakeContact(message);
     

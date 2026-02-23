@@ -1,6 +1,6 @@
-const isAdmin = require('../../lib/isAdmin');
-const store = require('../../lib/lightweight_store');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const isAdmin = require('../../davelib/isAdmin');
+const store = require('../../davelib/lightweight_store');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function deleteCommand(sock, chatId, message, senderId) {
     const fake = createFakeContact(message);

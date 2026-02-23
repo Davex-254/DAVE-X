@@ -1,8 +1,101 @@
-/*
- * Protected by ROMEK JA OBFUSCATOR
- * Protection Level: Basic
- * Generated: 2026-02-21T12:40:09.558Z
- * Warning: Unauthorized reverse engineering is prohibited
- */
+const axios = require('axios');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
-const _0x2cdfdb=_0x491c;(function(_0x3237d0,_0x29da48){const _0x18e21c={_0x35aab1:0xac,_0x22fa3d:0x94,_0x59d198:0xa2,_0x491d71:0xa3,_0x2ba7fd:0x8b,_0x573b93:0xb4,_0x43d343:0x8c},_0x4eb8e1=_0x491c,_0x3d6f6e=_0x3237d0();while(!![]){try{const _0x55c17c=-parseInt(_0x4eb8e1(_0x18e21c._0x35aab1))/0x1+-parseInt(_0x4eb8e1(_0x18e21c._0x22fa3d))/0x2*(-parseInt(_0x4eb8e1(0x88))/0x3)+-parseInt(_0x4eb8e1(_0x18e21c._0x59d198))/0x4+-parseInt(_0x4eb8e1(_0x18e21c._0x491d71))/0x5+parseInt(_0x4eb8e1(_0x18e21c._0x2ba7fd))/0x6+-parseInt(_0x4eb8e1(_0x18e21c._0x573b93))/0x7+parseInt(_0x4eb8e1(0xae))/0x8*(parseInt(_0x4eb8e1(_0x18e21c._0x43d343))/0x9);if(_0x55c17c===_0x29da48)break;else _0x3d6f6e['push'](_0x3d6f6e['shift']());}catch(_0x59570d){_0x3d6f6e['push'](_0x3d6f6e['shift']());}}}(_0x315a,0x7d6c2));function _0x491c(_0x403ffc,_0x56af01){const _0x315aa0=_0x315a();return _0x491c=function(_0x491c52,_0xa82936){_0x491c52=_0x491c52-0x87;let _0x468f08=_0x315aa0[_0x491c52];if(_0x491c['gIJfyf']===undefined){var _0xcfca82=function(_0x347294){const _0x11c6cb='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x27b390='',_0x234e76='';for(let _0x518ab4=0x0,_0x2409e1,_0x160a0e,_0x19b1d0=0x0;_0x160a0e=_0x347294['charAt'](_0x19b1d0++);~_0x160a0e&&(_0x2409e1=_0x518ab4%0x4?_0x2409e1*0x40+_0x160a0e:_0x160a0e,_0x518ab4++%0x4)?_0x27b390+=String['fromCharCode'](0xff&_0x2409e1>>(-0x2*_0x518ab4&0x6)):0x0){_0x160a0e=_0x11c6cb['indexOf'](_0x160a0e);}for(let _0x14db84=0x0,_0x35f23e=_0x27b390['length'];_0x14db84<_0x35f23e;_0x14db84++){_0x234e76+='%'+('00'+_0x27b390['charCodeAt'](_0x14db84)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x234e76);};_0x491c['wzXVwl']=_0xcfca82,_0x403ffc=arguments,_0x491c['gIJfyf']=!![];}const _0x4cc097=_0x315aa0[0x0],_0x434368=_0x491c52+_0x4cc097,_0x103be5=_0x403ffc[_0x434368];return!_0x103be5?(_0x468f08=_0x491c['wzXVwl'](_0x468f08),_0x403ffc[_0x434368]=_0x468f08):_0x468f08=_0x103be5,_0x468f08;},_0x491c(_0x403ffc,_0x56af01);}const axios=require(_0x2cdfdb(0x90)),{createFakeContact,getBotName}=require(_0x2cdfdb(0xb3));async function mistralCommand(_0x347294,_0x11c6cb,_0x27b390){const _0x24dbb6={_0x3cdb86:0xb0,_0x1d3a38:0x9c,_0x4aa22f:0x92,_0x20c4a9:0x9b,_0x52cab8:0x93,_0x4ad19f:0x89,_0x5a63bf:0xa8,_0x1373c1:0x96,_0x20a5dc:0x92,_0x43b397:0xa5,_0x51dcaa:0x8e,_0x5bc184:0x9e,_0x39f8a2:0xb5,_0x4fb136:0xb1,_0x516c68:0x8f,_0x1a33ca:0x92,_0x13c3f6:0x8f,_0x407b3a:0x95,_0x50431e:0x98,_0xe29954:0xaf,_0xcdc9c7:0x87,_0xc2710e:0x9a,_0x5bab0b:0xb2,_0x278390:0x8d,_0x301e13:0xa0},_0x197b04=_0x2cdfdb,_0x234e76=createFakeContact(_0x27b390),_0x518ab4=getBotName();try{await _0x347294[_0x197b04(0x8f)](_0x11c6cb,{'react':{'text':'⏳','key':_0x27b390[_0x197b04(0x95)]}});const _0x2409e1=_0x27b390[_0x197b04(0xaf)]?.[_0x197b04(0xa1)]||_0x27b390['message']?.[_0x197b04(_0x24dbb6._0x3cdb86)]?.[_0x197b04(_0x24dbb6._0x1d3a38)]||_0x27b390['message']?.['imageMessage']?.[_0x197b04(0x91)]||'';if(!_0x2409e1[_0x197b04(0x87)]('\x20'))return await _0x347294[_0x197b04(0x8f)](_0x11c6cb,{'text':_0x197b04(_0x24dbb6._0x4aa22f)+_0x518ab4+'*\x20Mistral\x20AI\x0a\x0aUse:\x20.mistral\x20<question>\x0aExample:\x20.mistral\x20what\x20is\x20AI'},{'quoted':_0x234e76});const _0x160a0e=_0x2409e1[_0x197b04(_0x24dbb6._0x20c4a9)]('\x20'),_0x19b1d0=_0x160a0e[_0x197b04(_0x24dbb6._0x52cab8)](0x1)[_0x197b04(0xab)]('\x20')[_0x197b04(_0x24dbb6._0x4ad19f)]();if(!_0x19b1d0)return await _0x347294[_0x197b04(0x8f)](_0x11c6cb,{'text':_0x197b04(0x92)+_0x518ab4+_0x197b04(_0x24dbb6._0x5a63bf)},{'quoted':_0x234e76});if(_0x19b1d0[_0x197b04(_0x24dbb6._0x1373c1)]>0x3e8)return await _0x347294['sendMessage'](_0x11c6cb,{'text':_0x197b04(_0x24dbb6._0x20a5dc)+_0x518ab4+_0x197b04(0x9f)},{'quoted':_0x234e76});await _0x347294[_0x197b04(_0x24dbb6._0x43b397)](_0x197b04(_0x24dbb6._0x51dcaa),_0x11c6cb);const _0x14db84=_0x197b04(_0x24dbb6._0x5bc184)+encodeURIComponent(_0x19b1d0),_0x35f23e=await axios[_0x197b04(0xa4)](_0x14db84,{'timeout':0x7530}),_0x12125d=_0x35f23e[_0x197b04(_0x24dbb6._0x39f8a2)];if(!_0x12125d?.[_0x197b04(0x8d)]||!_0x12125d?.['result'])throw new Error(_0x197b04(0x9d));await _0x347294['sendMessage'](_0x11c6cb,{'react':{'text':'✅','key':_0x27b390['key']}});const _0x36905b=_0x12125d[_0x197b04(_0x24dbb6._0x4fb136)][_0x197b04(0x89)]();await _0x347294[_0x197b04(_0x24dbb6._0x516c68)](_0x11c6cb,{'text':_0x197b04(_0x24dbb6._0x1a33ca)+_0x518ab4+_0x197b04(0xa9)+_0x19b1d0+'\x0a\x0a✦\x20'+_0x36905b},{'quoted':_0x234e76}),await _0x347294[_0x197b04(_0x24dbb6._0x13c3f6)](_0x11c6cb,{'react':{'text':'📤','key':_0x27b390[_0x197b04(_0x24dbb6._0x407b3a)]}});}catch(_0x35e69d){console[_0x197b04(0x8a)]('Mistral\x20AI\x20command\x20error:',_0x35e69d),await _0x347294[_0x197b04(0x8f)](_0x11c6cb,{'react':{'text':'❌','key':_0x27b390['key']}});let _0x38a62c=_0x197b04(0xa7);if(_0x35e69d[_0x197b04(0xad)]?.[_0x197b04(0x8d)]===0x194)_0x38a62c=_0x197b04(_0x24dbb6._0x50431e);else{if(_0x35e69d[_0x197b04(_0x24dbb6._0xe29954)][_0x197b04(_0x24dbb6._0xcdc9c7)](_0x197b04(_0x24dbb6._0xc2710e))||_0x35e69d[_0x197b04(_0x24dbb6._0x5bab0b)]===_0x197b04(0x99))_0x38a62c=_0x197b04(0xaa);else{if(_0x35e69d['code']==='ENOTFOUND')_0x38a62c=_0x197b04(0x97);else{if(_0x35e69d['response']?.[_0x197b04(_0x24dbb6._0x278390)]===0x1ad)_0x38a62c=_0x197b04(_0x24dbb6._0x301e13);else _0x35e69d[_0x197b04(0xad)]?.['status']>=0x1f4&&(_0x38a62c='✦\x20Server\x20error');}}}await _0x347294[_0x197b04(0x8f)](_0x11c6cb,{'text':_0x38a62c},{'quoted':_0x234e76});}}function _0x315a(){const _0x37adb8=['ntiYmJq3mNbXvNP4DG','ndvoEhPHDw4','C3rHDhvZ','y29TCg9ZAw5N','C2vUze1LC3nHz2u','yxHPB3m','y2fWDgLVBG','4PYMicO','C2XPy2u','mZHPvhf4wvC','A2v5','BgvUz3rO','4PYMie5LDhDVCMSGzxjYB3i','4PYMifnLCNzPy2uGDw5HDMfPBgfIBgu','runptK5bqK9sveve','DgLTzw91Da','C3bSAxq','Dgv4Da','qvbjigzHAwXLzcb0BYbNzw5LCMf0zsbYzxnWB25Zzse','Ahr0Chm6lY9HCgLZA2vPDgGUDg9Wl2fPl21PC3rYywW/Ct0','kGPrDwvZDgLVBIb0B28GBg9UzYaOBwf4ideWmdaGy2HHCNmP','4PYMifrVBYbTyw55ihjLCxvLC3rZ','y29UDMvYC2f0Aw9U','ntm0nZKYEvHgAvzc','mJi1odC2mfDrr01cua','z2v0','C2vUzfbYzxnLBMnLvxbKyxrL','zxHWB3j0CW','4PYMiezHAwXLzcb0BYbNzw5LCMf0zsbYzxnWB25Zzq','kGPqCM92AwrLigeGCxvLC3rPB24','kIaTigfTigTUB3CGAw52AxnPyMXLipcFLkukcUkCPIbrDwvZDgLVBJOG','4PYMifjLCxvLC3qGDgLTzw91Da','AM9PBG','ndeWmZn5CvPVB2W','CMvZCg9UC2u','mtyWmdu3nKPqDhjkqW','BwvZC2fNzq','zxH0zw5KzwruzxH0twvZC2fNzq','CMvZDwX0','y29Kzq','lI4VlI4VBgLIl2zHA2vdB250ywn0','ntu0otiYmMf0EMPhyW','zgf0yq','Aw5JBhvKzxm','otGXoufTB3Lfsq','DhjPBq','zxjYB3i'];_0x315a=function(){return _0x37adb8;};return _0x315a();}module[_0x2cdfdb(0xa6)]=mistralCommand;
+async function mistralCommand(sock, chatId, message) {
+    const fake = createFakeContact(message);
+    const botName = getBotName();
+    
+    try {
+        // Send initial reaction
+        await sock.sendMessage(chatId, {
+            react: { text: '⏳', key: message.key }
+        });
+
+        const text = message.message?.conversation || 
+                     message.message?.extendedTextMessage?.text || 
+                     message.message?.imageMessage?.caption || 
+                     '';
+        
+        if (!text.includes(' ')) {
+            return await sock.sendMessage(chatId, {
+                text: `✦ *${botName}* Mistral AI\n\nUse: .mistral <question>\nExample: .mistral what is AI`
+            }, { quoted: fake });
+        }
+
+        const parts = text.split(' ');
+        const query = parts.slice(1).join(' ').trim();
+
+        if (!query) {
+            return await sock.sendMessage(chatId, {
+                text: `✦ *${botName}*\nProvide a question`
+            }, { quoted: fake });
+        }
+
+        if (query.length > 1000) {
+            return await sock.sendMessage(chatId, {
+                text: `✦ *${botName}*\nQuestion too long (max 1000 chars)`
+            }, { quoted: fake });
+        }
+
+        // Update presence to "typing"
+        await sock.sendPresenceUpdate('composing', chatId);
+
+        // Fetch AI response using Mistral API
+        const apiUrl = `https://apiskeith.top/ai/mistral?q=${encodeURIComponent(query)}`;
+        const response = await axios.get(apiUrl, { timeout: 30000 });
+        const apiData = response.data;
+
+        if (!apiData?.status || !apiData?.result) {
+            throw new Error("API failed to generate response!");
+        }
+
+        // Send success reaction
+        await sock.sendMessage(chatId, {
+            react: { text: '✅', key: message.key }
+        });
+
+        // Format and send response
+        const aiResponse = apiData.result.trim();
+        
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* - am know invisible 🔥
+
+✦ Question: ${query}
+
+✦ ${aiResponse}`
+        }, { quoted: fake });
+
+        // Send final reaction
+        await sock.sendMessage(chatId, {
+            react: { text: '📤', key: message.key }
+        });
+
+    } catch (error) {
+        console.error("Mistral AI command error:", error);
+        
+        // Send error reaction
+        await sock.sendMessage(chatId, {
+            react: { text: '❌', key: message.key }
+        });
+
+        let errorMessage = "✦ Failed to generate response";
+        
+        if (error.response?.status === 404) {
+            errorMessage = '✦ Service unavailable';
+        } else if (error.message.includes('timeout') || error.code === 'ECONNABORTED') {
+            errorMessage = '✦ Request timeout';
+        } else if (error.code === 'ENOTFOUND') {
+            errorMessage = '✦ Network error';
+        } else if (error.response?.status === 429) {
+            errorMessage = '✦ Too many requests';
+        } else if (error.response?.status >= 500) {
+            errorMessage = '✦ Server error';
+        }
+            
+        await sock.sendMessage(chatId, {
+            text: errorMessage
+        }, { quoted: fake });
+    }
+}
+
+module.exports = mistralCommand;

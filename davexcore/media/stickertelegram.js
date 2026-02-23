@@ -1,13 +1,13 @@
 const fetch = require('node-fetch');
-const { writeExifImg } = require('../../lib/exif');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { writeExifImg } = require('../../davelib/exif');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 const delay = time => new Promise(res => setTimeout(res, time));
 const fs = require('fs');
 const path = require('path');
 const webp = require('node-webpmux');
 const crypto = require('crypto');
 const { exec } = require('child_process');
-const settings = require('../../settings');
+const settings = require('../../daveset');
 
 async function stickerTelegramCommand(sock, chatId, msg) {
     try {

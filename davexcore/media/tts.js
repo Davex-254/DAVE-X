@@ -1,7 +1,7 @@
 const gTTS = require('gtts');
 const fs = require('fs');
 const path = require('path');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function ttsCommand(sock, chatId, text, message, language = 'en') {
     // If no text provided, try to get it from quoted or mentioned message

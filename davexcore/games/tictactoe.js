@@ -1,4 +1,4 @@
-const TicTacToe = require('../../lib/tictactoe');
+const TicTacToe = require('../../davelib/tictactoe');
 
 const games = {};
 const gameTimeouts = {};

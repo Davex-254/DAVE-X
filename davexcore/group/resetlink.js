@@ -1,8 +1,57 @@
-/*
- * Protected by ROMEK JA OBFUSCATOR
- * Protection Level: Basic
- * Generated: 2026-02-21T12:14:09.788Z
- * Warning: Unauthorized reverse engineering is prohibited
- */
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
-const _0x35b2c4=_0x2e5a;(function(_0x53b5b7,_0xaabeeb){const _0x5bfb37={_0x491f0a:0xc3,_0x2f25a2:0xb3,_0x16188d:0xbc,_0x3ce2b2:0xb2,_0x55844b:0xac,_0x47c199:0xc5},_0x440e6e=_0x2e5a,_0x858c0e=_0x53b5b7();while(!![]){try{const _0x5aa758=-parseInt(_0x440e6e(0xa6))/0x1*(parseInt(_0x440e6e(_0x5bfb37._0x491f0a))/0x2)+-parseInt(_0x440e6e(0xad))/0x3+-parseInt(_0x440e6e(0xc2))/0x4+parseInt(_0x440e6e(0xc0))/0x5*(-parseInt(_0x440e6e(0xa7))/0x6)+parseInt(_0x440e6e(_0x5bfb37._0x2f25a2))/0x7*(parseInt(_0x440e6e(_0x5bfb37._0x16188d))/0x8)+parseInt(_0x440e6e(_0x5bfb37._0x3ce2b2))/0x9+-parseInt(_0x440e6e(_0x5bfb37._0x55844b))/0xa*(-parseInt(_0x440e6e(_0x5bfb37._0x47c199))/0xb);if(_0x5aa758===_0xaabeeb)break;else _0x858c0e['push'](_0x858c0e['shift']());}catch(_0x44239e){_0x858c0e['push'](_0x858c0e['shift']());}}}(_0x2e70,0x9bd72));const {createFakeContact,getBotName}=require(_0x35b2c4(0xaf));async function resetlinkCommand(_0x2ecca4,_0x189e61,_0xdbb990,_0x2444a0){const _0xa5c92a={_0x3d7d06:0xba,_0x51f293:0xb6,_0x1dbf7f:0xab,_0x5b21d5:0xa9,_0x415543:0xb8,_0x2825a7:0xb1,_0x3f9790:0xb9,_0x45cc19:0xb0},_0x402ff7=_0x35b2c4,_0x3ad914=createFakeContact(_0x2444a0),_0x47bf51=getBotName();try{const _0x2ed5a1=await _0x2ecca4[_0x402ff7(_0xa5c92a._0x3d7d06)](_0x189e61),_0x84eeb9=_0x2ed5a1['participants'][_0x402ff7(_0xa5c92a._0x51f293)](_0x5d0294=>_0x5d0294['id']===_0xdbb990&&_0x5d0294[_0x402ff7(0xae)]),_0xa9e2c9=_0x2ecca4[_0x402ff7(0xbf)]||_0x2ecca4[_0x402ff7(0xaa)]?.[_0x402ff7(_0xa5c92a._0x1dbf7f)]?.[_0x402ff7(0xbf)];let _0x27e750;if(_0xa9e2c9&&_0xa9e2c9['id']){const _0x235356=_0xa9e2c9['id']['includes'](':')?_0xa9e2c9['id'][_0x402ff7(0xa8)](':')[0x0]:_0xa9e2c9['id'];_0x27e750=_0x235356+_0x402ff7(_0xa5c92a._0x5b21d5);}else{const _0x26c280=_0x2ecca4['authState']?.[_0x402ff7(_0xa5c92a._0x415543)]?.['me']?.['id']||_0x402ff7(0xc1);_0x27e750=_0x26c280[_0x402ff7(0xa8)](':')[0x0]+'@s.whatsapp.net';}const _0x1ae5f8=_0x2ed5a1[_0x402ff7(0xb5)][_0x402ff7(0xb6)](_0x50c190=>_0x50c190['id']===_0x27e750&&_0x50c190[_0x402ff7(0xae)]);if(!_0x84eeb9){await _0x2ecca4[_0x402ff7(_0xa5c92a._0x2825a7)](_0x189e61,{'text':'✦\x20*'+_0x47bf51+_0x402ff7(0xb7)},{'quoted':_0x3ad914});return;}if(!_0x1ae5f8){await _0x2ecca4[_0x402ff7(0xb1)](_0x189e61,{'text':_0x402ff7(0xb9)+_0x47bf51+_0x402ff7(0xbe)},{'quoted':_0x3ad914});return;}const _0x4d7a65=await _0x2ecca4[_0x402ff7(0xc4)](_0x189e61);await _0x2ecca4['sendMessage'](_0x189e61,{'text':_0x402ff7(_0xa5c92a._0x3f9790)+_0x47bf51+_0x402ff7(0xbd)+_0x4d7a65},{'quoted':_0x3ad914});}catch(_0x52b68f){console[_0x402ff7(_0xa5c92a._0x45cc19)](_0x402ff7(0xb4),_0x52b68f),await _0x2ecca4[_0x402ff7(_0xa5c92a._0x2825a7)](_0x189e61,{'text':_0x402ff7(_0xa5c92a._0x3f9790)+_0x47bf51+_0x402ff7(0xbb)},{'quoted':_0x3ad914});}}function _0x2e70(){const _0x2f6a73=['mteWmtK5otzvv01OB1m','nZq5mtrjCvnvC0u','uMvZzxrSAw5RievYCM9YoG','CgfYDgLJAxbHBNrZ','C29Tzq','kGPbzg1PBNmGB25SEsbJB21Tyw5K','y3jLzhm','4PYMicO','z3jVDxbnzxrHzgf0yq','kGPgywLSzwqGDg8GCMvZzxqGBgLUAW','oeTms3n6vq','kGOkr3jVDxaGBgLUAYbYzxnLDaOkAhr0Chm6lY9JAgf0lNDOyxrZyxbWlMnVBs8','kGPcB3qGBMvLzhmGywrTAw4GCMLNAhrZ','DxnLCG','nZu5mJeWvffPr05u','mtiZndu2nZG5ma','mZGXnJGWogHowg1Srq','mZrgseDwv1O','z3jVDxbszxzVA2vjBNzPDgu','mZe5t2fxqND6','mZa3ntnRs0PgBe8','mZb5r1PssKC','C3bSAxq','qhmUD2HHDhnHChaUBMv0','C3rHDgu','BgvNywn5','nJmYndeWAuHmrxPL','ntGZodaWBg1YyLvb','ywrTAw4','lI4VlI4VBgLIl2zHA2vdB250ywn0','zxjYB3i','C2vUze1LC3nHz2u'];_0x2e70=function(){return _0x2f6a73;};return _0x2e70();}function _0x2e5a(_0x34a2b2,_0x1b574e){const _0x2e70e8=_0x2e70();return _0x2e5a=function(_0x2e5a78,_0x35d0d0){_0x2e5a78=_0x2e5a78-0xa6;let _0x55a80e=_0x2e70e8[_0x2e5a78];if(_0x2e5a['hcjDIZ']===undefined){var _0x448eed=function(_0x2ecca4){const _0x189e61='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0xdbb990='',_0x2444a0='';for(let _0x3ad914=0x0,_0x47bf51,_0x2ed5a1,_0x84eeb9=0x0;_0x2ed5a1=_0x2ecca4['charAt'](_0x84eeb9++);~_0x2ed5a1&&(_0x47bf51=_0x3ad914%0x4?_0x47bf51*0x40+_0x2ed5a1:_0x2ed5a1,_0x3ad914++%0x4)?_0xdbb990+=String['fromCharCode'](0xff&_0x47bf51>>(-0x2*_0x3ad914&0x6)):0x0){_0x2ed5a1=_0x189e61['indexOf'](_0x2ed5a1);}for(let _0xa9e2c9=0x0,_0x27e750=_0xdbb990['length'];_0xa9e2c9<_0x27e750;_0xa9e2c9++){_0x2444a0+='%'+('00'+_0xdbb990['charCodeAt'](_0xa9e2c9)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2444a0);};_0x2e5a['noQyAP']=_0x448eed,_0x34a2b2=arguments,_0x2e5a['hcjDIZ']=!![];}const _0x3b46d5=_0x2e70e8[0x0],_0x26a96c=_0x2e5a78+_0x3b46d5,_0x2697bf=_0x34a2b2[_0x26a96c];return!_0x2697bf?(_0x55a80e=_0x2e5a['noQyAP'](_0x55a80e),_0x34a2b2[_0x26a96c]=_0x55a80e):_0x55a80e=_0x2697bf,_0x55a80e;},_0x2e5a(_0x34a2b2,_0x1b574e);}module['exports']=resetlinkCommand;
+async function resetlinkCommand(sock, chatId, senderId, message) {
+    const fake = createFakeContact(message);
+    const botName = getBotName();
+    
+    try {
+        const groupMetadata = await sock.groupMetadata(chatId);
+
+        const isAdmin = groupMetadata.participants.some(p => 
+            p.id === senderId && p.admin
+        );
+
+        const botUser = sock.user || sock.state?.legacy?.user;
+        let botId;
+
+        if (botUser && botUser.id) {
+            const rawId = botUser.id.includes(':') ? botUser.id.split(':')[0] : botUser.id;
+            botId = `${rawId}@s.whatsapp.net`;
+        } else {
+            const phoneNumber = sock.authState?.creds?.me?.id || '1234567890';
+            botId = `${phoneNumber.split(':')[0]}@s.whatsapp.net`;
+        }
+
+        const isBotAdmin = groupMetadata.participants.some(p => 
+            p.id === botId && p.admin
+        );
+
+        if (!isAdmin) {
+            await sock.sendMessage(chatId, { 
+                text: `✦ *${botName}*\nAdmins only command` 
+            }, { quoted: fake });
+            return;
+        }
+
+        if (!isBotAdmin) {
+            await sock.sendMessage(chatId, { 
+                text: `✦ *${botName}*\nBot needs admin rights` 
+            }, { quoted: fake });
+            return;
+        }
+
+        const newCode = await sock.groupRevokeInvite(chatId);
+
+        await sock.sendMessage(chatId, { 
+            text: `✦ *${botName}*\n\nGroup link reset\n\nhttps://chat.whatsapp.com/${newCode}`
+        }, { quoted: fake });
+
+    } catch (error) {
+        console.error('Resetlink Error:', error);
+        await sock.sendMessage(chatId, { 
+            text: `✦ *${botName}*\nFailed to reset link`
+        }, { quoted: fake });
+    }
+}
+
+module.exports = resetlinkCommand;

@@ -3,7 +3,7 @@ const Jimp = require('jimp');
 const webp = require('webp-converter');
 const fs = require('fs');
 const path = require('path');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 // Fake contact creator 😜
 async function blurCommand(sock, chatId, message, quotedMessage) {

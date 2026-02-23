@@ -1,7 +1,7 @@
 const { getGroupConfig, setGroupConfig, parseToggleCommand } = require('../../Database/settingsStore');
 const db = require('../../Database/database');
-const isAdmin = require('../../lib/isAdmin');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const isAdmin = require('../../davelib/isAdmin');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 function participantToString(p) {
     if (typeof p === 'string') return p;

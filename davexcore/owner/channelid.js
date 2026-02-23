@@ -1,4 +1,4 @@
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function channelidCommand(sock, chatId, message) {
     const fake = createFakeContact(message);

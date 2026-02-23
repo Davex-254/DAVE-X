@@ -1,4 +1,4 @@
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 function rpsCommand(sock, chatId, message, args) {
     const fakeContact = createFakeContact(message);

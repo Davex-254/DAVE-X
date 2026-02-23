@@ -2,14 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const { downloadContentFromMessage } = require('@whiskeysockets/baileys');
 const db = require('../../Database/database');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function ensureGroupAndAdmin(sock, chatId, senderId, message) {
     const isGroup = chatId.endsWith('@g.us');
     if (!isGroup) {
         return { ok: false };
     }
-    const isAdmin = require('../../lib/isAdmin');
+    const isAdmin = require('../../davelib/isAdmin');
     const adminStatus = await isAdmin(sock, chatId, senderId);
     if (!adminStatus.isBotAdmin) {
         return { ok: false };

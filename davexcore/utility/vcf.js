@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function vcfCommand(sock, chatId, message) {
     const fkontak = createFakeContact(message);

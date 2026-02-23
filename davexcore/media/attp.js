@@ -1,8 +1,8 @@
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { writeExifImg, writeExifVid } = require('../../lib/exif');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { writeExifImg, writeExifVid } = require('../../davelib/exif');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function attpCommand(sock, chatId, message) {
     const userMessage = message.message.conversation || message.message.extendedTextMessage?.text || '';
     const text = userMessage.split(' ').slice(1).join(' ');

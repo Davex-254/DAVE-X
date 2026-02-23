@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { downloadContentFromMessage } = require('@whiskeysockets/baileys');
-const { uploadImage } = require('../../lib/uploadImage');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { uploadImage } = require('../../davelib/uploadImage');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function getQuotedOrOwnImageUrl(sock, message) {
     // 1) Quoted image (highest priority)

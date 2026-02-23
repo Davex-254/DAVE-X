@@ -1,6 +1,6 @@
-const isAdmin = require('../../lib/isAdmin');
+const isAdmin = require('../../davelib/isAdmin');
 const db = require('../../Database/database');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function muteCommand(sock, chatId, senderId, message, duration) {
     const fake = createFakeContact(senderId);

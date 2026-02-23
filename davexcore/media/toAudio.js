@@ -3,7 +3,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs').promises;
 const { tmpdir } = require('os');
 const path = require('path');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function toAudioCommand(sock, chatId, message) {
   const fkontak = createFakeContact(message);
   let inputPath = '';

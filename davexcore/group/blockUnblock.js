@@ -1,163 +1,177 @@
-// Utility: delay helper
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
+
+function resolveTarget(message) {
+    const contextInfo = message.message?.extendedTextMessage?.contextInfo;
+    const quotedParticipant = contextInfo?.participant;
+    const mentionedJids = contextInfo?.mentionedJid || [];
+    const text = message.message?.conversation ||
+                 message.message?.extendedTextMessage?.text || '';
+    const argNumber = text.split(/\s+/).slice(1).join('').replace(/[^0-9]/g, '');
+
+    if (quotedParticipant) return quotedParticipant;
+    if (mentionedJids.length > 0) return mentionedJids[0];
+    if (argNumber.length >= 7) return `${argNumber}@s.whatsapp.net`;
+    return null;
+}
 
 async function blockCommand(sock, chatId, message) {
+    const fake = createFakeContact(message);
+    const botName = getBotName();
     try {
-        // Owner check
         if (!message.key.fromMe) {
-            return sock.sendMessage(chatId, { 
-                text: '❌ This command is only available for the owner!',
-                quoted: message
-            });
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | Owner only command.`
+            }, { quoted: fake });
         }
 
-        const contextInfo = message.message?.extendedTextMessage?.contextInfo;
-        const mentionedJid = contextInfo?.participant;
-        const quotedMessage = contextInfo?.quotedMessage;
+        const userToBlock = resolveTarget(message);
 
-        if (!quotedMessage && !mentionedJid) {
-            return sock.sendMessage(chatId, { 
-                text: '❌ Please reply to a user\'s message to block them!\n\nUsage: Reply to user\'s message with !block',
-                quoted: message
-            });
-        }
-
-        const userToBlock = mentionedJid;
         if (!userToBlock) {
-            return sock.sendMessage(chatId, { 
-                text: '❌ Could not identify user to block!',
-                quoted: message
-            });
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | How to block:\n\n• Reply to a message → .block\n• Mention: .block @user\n• By number: .block 254712345678`
+            }, { quoted: fake });
         }
 
-        // Prevent blocking the bot itself
-        const botId = sock.user.id.split(':')[0];
+        const botId = (sock.user?.id || '').split(':')[0];
         if (userToBlock.includes(botId)) {
-            return sock.sendMessage(chatId, { 
-                text: '❌ You cannot block the bot itself!',
-                quoted: message
-            });
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | Cannot block the bot itself!`
+            }, { quoted: fake });
         }
 
         await sock.updateBlockStatus(userToBlock, 'block');
-        await sock.sendMessage(chatId, { 
-            text: '✅ Successfully blocked user!',
-            quoted: message
-        });
+        const num = userToBlock.split('@')[0];
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ✅ Blocked +${num}`,
+            mentions: [userToBlock]
+        }, { quoted: fake });
 
-        console.log(`✅ Blocked user: ${userToBlock}`);
     } catch (error) {
-        console.error('Error in blockCommand:', error);
-        await sock.sendMessage(chatId, { 
-            text: '❌ Failed to block user!',
-            quoted: message
-        }).catch(() => {});
+        console.error('blockCommand error:', error.message);
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ❌ Block failed — reply to the user's message or mention them.`
+        }, { quoted: fake }).catch(() => {});
+    }
+}
+
+async function unblockCommand(sock, chatId, message) {
+    const fake = createFakeContact(message);
+    const botName = getBotName();
+    try {
+        if (!message.key.fromMe) {
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | Owner only command.`
+            }, { quoted: fake });
+        }
+
+        const userToUnblock = resolveTarget(message);
+
+        if (!userToUnblock) {
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | How to unblock:\n\n• Mention: .unblock @user\n• By number: .unblock 254712345678`
+            }, { quoted: fake });
+        }
+
+        await sock.updateBlockStatus(userToUnblock, 'unblock');
+        const num = userToUnblock.split('@')[0];
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ✅ Unblocked +${num}`,
+            mentions: [userToUnblock]
+        }, { quoted: fake });
+
+    } catch (error) {
+        console.error('unblockCommand error:', error.message);
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ❌ Unblock failed.`
+        }, { quoted: fake }).catch(() => {});
     }
 }
 
 async function blocklistCommand(sock, chatId, message) {
+    const fake = createFakeContact(message);
+    const botName = getBotName();
     try {
         if (!message.key.fromMe) {
-            return sock.sendMessage(chatId, { 
-                text: '❌ This command is only available for the owner!',
-                quoted: message
-            });
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | Owner only command.`
+            }, { quoted: fake });
         }
 
         const blockedContacts = await sock.fetchBlocklist().catch(() => []);
         if (!blockedContacts.length) {
-            return sock.sendMessage(chatId, { 
-                text: 'No blocked contacts found.',
-                quoted: message
-            });
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | No blocked contacts.`
+            }, { quoted: fake });
         }
 
-        const totalBlocked = blockedContacts.length;
+        const total = blockedContacts.length;
         const listText = blockedContacts
-            .map(jid => `• ${jid.split('@')[0]}`)
-            .slice(0, 20)
+            .slice(0, 30)
+            .map((jid, i) => `${i + 1}. +${jid.split('@')[0]}`)
             .join('\n');
 
-        let responseText = `📋 Blocked: ${totalBlocked}\n\n${listText}`;
-        if (totalBlocked > 20) {
-            responseText += `\n\n... and ${totalBlocked - 20} more`;
-        }
+        let text = `✦ *${botName}* | Blocklist\n\n📋 Total: *${total}*\n\n${listText}`;
+        if (total > 30) text += `\n\n... and ${total - 30} more`;
 
-        await sock.sendMessage(chatId, { 
-            text: responseText,
-            quoted: message
-        });
+        await sock.sendMessage(chatId, { text }, { quoted: fake });
     } catch (error) {
-        console.error('Error in blocklistCommand:', error);
-        await sock.sendMessage(chatId, { 
-            text: '❌ Failed to fetch blocklist!',
-            quoted: message
-        }).catch(() => {});
+        console.error('blocklistCommand error:', error.message);
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ❌ Failed to fetch blocklist.`
+        }, { quoted: fake }).catch(() => {});
     }
 }
 
 async function unblockallCommand(sock, chatId, message) {
+    const fake = createFakeContact(message);
+    const botName = getBotName();
     try {
         if (!message.key.fromMe) {
-            return sock.sendMessage(chatId, { 
-                text: '❌ This command is only available for the owner!',
-                quoted: message
-            });
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | Owner only command.`
+            }, { quoted: fake });
         }
 
         const blockedContacts = await sock.fetchBlocklist().catch(() => []);
         if (!blockedContacts.length) {
-            return sock.sendMessage(chatId, { 
-                text: 'No blocked contacts to unblock.',
-                quoted: message
-            });
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | No blocked contacts to unblock.`
+            }, { quoted: fake });
         }
 
-        await sock.sendMessage(chatId, { 
-            text: `🔄 Starting soft unblock of ${blockedContacts.length} contacts...`,
-            quoted: message
-        });
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | 🔄 Unblocking ${blockedContacts.length} contacts...`
+        }, { quoted: fake });
 
         let successCount = 0;
         for (const jid of blockedContacts) {
             try {
                 await sock.updateBlockStatus(jid, 'unblock');
                 successCount++;
-                console.log(`✅ Soft-unblocked: ${jid}`);
-
-                // Optional: send progress every 10 unblocks
                 if (successCount % 10 === 0) {
-                    await sock.sendMessage(chatId, { 
-                        text: `🔄 Progress: ${successCount}/${blockedContacts.length} contacts unblocked...`,
-                        quoted: message
-                    });
+                    await sock.sendMessage(chatId, {
+                        text: `✦ *${botName}* | Progress: ${successCount}/${blockedContacts.length}...`
+                    }, { quoted: fake });
                 }
-
-                // Soft pacing: wait 500ms between requests
                 await delay(500);
-            } catch {
-                console.warn(`⚠️ Failed to unblock: ${jid}`);
-            }
+            } catch { }
         }
 
-        await sock.sendMessage(chatId, { 
-            text: `✅ Finished soft unblock. Total unblocked: ${successCount}/${blockedContacts.length}`,
-            quoted: message
-        });
-
-        console.log(`✅ Soft unblock complete: ${successCount}/${blockedContacts.length}`);
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ✅ Unblocked ${successCount}/${blockedContacts.length} contacts.`
+        }, { quoted: fake });
     } catch (error) {
-        console.error('Error in unblockallCommand:', error);
-        await sock.sendMessage(chatId, { 
-            text: '❌ Failed to unblock contacts!',
-            quoted: message
-        }).catch(() => {});
+        console.error('unblockallCommand error:', error.message);
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ❌ Failed to unblock all.`
+        }, { quoted: fake }).catch(() => {});
     }
 }
 
 module.exports = {
     blockCommand,
+    unblockCommand,
     blocklistCommand,
     unblockallCommand
 };

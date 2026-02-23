@@ -1,4 +1,4 @@
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 const goodnightMessages = [
     "Good night! May your dreams be filled with joy and peace.",

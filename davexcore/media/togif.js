@@ -1,4 +1,4 @@
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 const { downloadMediaMessage } = require('@whiskeysockets/baileys');
 
 async function togifCommand(sock, chatId, message) {

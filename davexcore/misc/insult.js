@@ -1,4 +1,4 @@
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 const insults = [
     { 
         text: "You're like a cloud. When you disappear, it's a beautiful day!",

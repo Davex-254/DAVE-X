@@ -1,4 +1,4 @@
-const settings = require('../settings');
+const settings = require('../daveset');
 const { isSudo } = require('./index');
 
 async function isOwnerOrSudo(senderId) {

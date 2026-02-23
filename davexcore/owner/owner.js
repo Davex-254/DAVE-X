@@ -1,5 +1,5 @@
-const settings = require('../../settings');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const settings = require('../../daveset');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function ownerCommand(sock, chatId, message) {
     const fkontak = createFakeContact(message);
     

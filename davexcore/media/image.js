@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 // Track processed message IDs to prevent duplicate handling
 const processedMessages = new Set();

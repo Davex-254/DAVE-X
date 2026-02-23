@@ -1,4 +1,4 @@
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 // Channel JID Extractor
 async function chaneljidCommand(sock, chatId, message) {
     try {

@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function downloadAndValidate(downloadUrl, timeout = 60000) {
     const response = await axios({

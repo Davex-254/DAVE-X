@@ -1,6 +1,6 @@
 const axios = require('axios');
-const { channelInfo } = require('../../lib/messageConfig');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { channelInfo } = require('../../davelib/messageConfig');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function wastedCommand(sock, chatId, message) {
     let userToWaste;

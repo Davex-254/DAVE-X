@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const FormData = require('form-data');
-const { TelegraPh } = require('../../lib/uploader');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { TelegraPh } = require('../../davelib/uploader');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function uploadToCatbox(filePath) {
     const form = new FormData();
     form.append("reqtype", "fileupload");
@@ -54,7 +54,8 @@ async function extractQuotedMedia(message) {
 }
 
 async function urlCommand(sock, chatId, message) {
-    const fakeContact = createFakeContact(message);
+    const senderId = message.key.participant || message.key.remoteJid;
+    const fakeContact = createFakeContact(senderId);
     
     try {
         await sock.sendMessage(chatId, { react: { text: '🔺', key: message.key } });

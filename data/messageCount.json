@@ -1,4 +1,4 @@
 {
-  "isPublic": true,
-  "messageCount": {}
+  "mode": "public",
+  "isPublic": true
 }

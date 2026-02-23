@@ -1,8 +1,95 @@
-/*
- * Protected by ROMEK JA OBFUSCATOR
- * Protection Level: Basic
- * Generated: 2026-02-21T12:39:31.724Z
- * Warning: Unauthorized reverse engineering is prohibited
- */
+const axios = require('axios');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
-function _0x2aa3(){const _0xfda181=['kGPqCM92AwrLigeGCxvLC3rPB24','Aw5JBhvKzxm','otDTEMnbAgG','mJjLvgz3Cg4','kGPrDwvZDgLVBIb0B28GBg9UzYaOBwf4ideWmdaGy2HHCNmP','BgvUz3rO','ugvYCgXLEgL0EsbbssbJB21Tyw5KigvYCM9YoG','4PYMifjLCxvLC3qGDgLTzw91Da','mJyWmZq2mg1bvLLrCG','A2v5','mJa2mtyWtMPRwvft','y29UDMvYC2f0Aw9U','4PYMifnLCNzPy2uGDw5HDMfPBgfIBgu','DgLTzw91Da','zxH0zw5KzwruzxH0twvZC2fNzq','BwvZC2fNzq','AM9PBG','Dgv4Da','mJG3ntq0zgT6veTJ','DhjPBq','C3rHDhvZ','nZi0nwTptefmDG','mtmYmNz3rvjXAG','nMTiCu5rua','ndqXmJDkq1b5twe','Ahr0Chm6lY9HCgLZA2vPDgGUDg9Wl2fPl3bLCNbSzxHPDhK/Ct0','nZDxs3Dfqxy','Aw1Hz2vnzxnZywDL','4PYMiezHAwXLzcb0BYbNzw5LCMf0zsbYzxnWB25Zzq','4PYMifnLCNzLCIbLCNjVCG','yxHPB3m','y29TCg9ZAw5N','kIaTigfTigTUB3CGAw52AxnPyMXLipcFLkukcG','4PYMie5LDhDVCMSGzxjYB3i','C2XPy2u','y2fWDgLVBG','C2vUze1LC3nHz2u','C2vUzfbYzxnLBMnLvxbKyxrL','4PYMicO','z2v0','lI4VlI4VBgLIl2zHA2vdB250ywn0','ugvYCgXLEgL0EsbbssbMywLSzwqGDg8Gz2vUzxjHDguGCMvZCg9UC2uH','ru5pvezpvu5e','CMvZDwX0','CMvZCg9UC2u','mteXotu5nvLes0Tfsq','y29Kzq','C3bSAxq','kIbqzxjWBgv4Axr5iefjcGPvC2u6ic5WzxjWBgv4Axr5idXXDwvZDgLVBJ4krxHHBxbSztOGlNbLCNbSzxHPDhKGD2HHDcbPCYbbsq','runptK5bqK9sveve','zxHWB3j0CW','mti1mfrsq2jyDq'];_0x2aa3=function(){return _0xfda181;};return _0x2aa3();}const _0x2139b4=_0x2d85;(function(_0x285e6c,_0x501840){const _0x142a37={_0x28f5a0:0x16a,_0x570dd9:0x180,_0xc21410:0x161,_0xae8e61:0x182,_0x9a8f8b:0x17a,_0x168c59:0x167,_0x4fd995:0x16b,_0x4c1971:0x170},_0x3f8adc=_0x2d85,_0x43de26=_0x285e6c();while(!![]){try{const _0x576e1f=-parseInt(_0x3f8adc(_0x142a37._0x28f5a0))/0x1*(-parseInt(_0x3f8adc(0x17e))/0x2)+-parseInt(_0x3f8adc(_0x142a37._0x570dd9))/0x3+-parseInt(_0x3f8adc(0x172))/0x4+parseInt(_0x3f8adc(_0x142a37._0xc21410))/0x5*(parseInt(_0x3f8adc(0x17f))/0x6)+parseInt(_0x3f8adc(_0x142a37._0xae8e61))/0x7*(parseInt(_0x3f8adc(_0x142a37._0x9a8f8b))/0x8)+-parseInt(_0x3f8adc(0x17d))/0x9*(-parseInt(_0x3f8adc(_0x142a37._0x168c59))/0xa)+-parseInt(_0x3f8adc(_0x142a37._0x4fd995))/0xb*(parseInt(_0x3f8adc(_0x142a37._0x4c1971))/0xc);if(_0x576e1f===_0x501840)break;else _0x43de26['push'](_0x43de26['shift']());}catch(_0x46d23f){_0x43de26['push'](_0x43de26['shift']());}}}(_0x2aa3,0x454e3));const axios=require(_0x2139b4(0x186)),{createFakeContact,getBotName}=require(_0x2139b4(0x15c));function _0x2d85(_0x1fb83e,_0x5b21a5){const _0x2aa333=_0x2aa3();return _0x2d85=function(_0x2d85bc,_0x302a3a){_0x2d85bc=_0x2d85bc-0x157;let _0x17b2c1=_0x2aa333[_0x2d85bc];if(_0x2d85['zIFjew']===undefined){var _0x33d5c3=function(_0x59564f){const _0x43ba90='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x147e86='',_0x24256b='';for(let _0x22b245=0x0,_0x39fc7a,_0x166f4f,_0x39a6ea=0x0;_0x166f4f=_0x59564f['charAt'](_0x39a6ea++);~_0x166f4f&&(_0x39fc7a=_0x22b245%0x4?_0x39fc7a*0x40+_0x166f4f:_0x166f4f,_0x22b245++%0x4)?_0x147e86+=String['fromCharCode'](0xff&_0x39fc7a>>(-0x2*_0x22b245&0x6)):0x0){_0x166f4f=_0x43ba90['indexOf'](_0x166f4f);}for(let _0x493ead=0x0,_0x4f7912=_0x147e86['length'];_0x493ead<_0x4f7912;_0x493ead++){_0x24256b+='%'+('00'+_0x147e86['charCodeAt'](_0x493ead)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x24256b);};_0x2d85['aOGdmK']=_0x33d5c3,_0x1fb83e=arguments,_0x2d85['zIFjew']=!![];}const _0x1ce3c0=_0x2aa333[0x0],_0xba1354=_0x2d85bc+_0x1ce3c0,_0x3b3bc8=_0x1fb83e[_0xba1354];return!_0x3b3bc8?(_0x17b2c1=_0x2d85['aOGdmK'](_0x17b2c1),_0x1fb83e[_0xba1354]=_0x17b2c1):_0x17b2c1=_0x3b3bc8,_0x17b2c1;},_0x2d85(_0x1fb83e,_0x5b21a5);}async function perplexityCommand(_0x59564f,_0x43ba90,_0x147e86){const _0x5aad65={_0x3cde15:0x171,_0x1c3219:0x177,_0x44021d:0x176,_0x588991:0x179,_0x488f4d:0x157,_0x1cff86:0x169,_0x82ed1a:0x178,_0xc83fdc:0x17b,_0x305fb3:0x168,_0x44a92e:0x16d,_0x1337d7:0x15a,_0x3e9dae:0x159,_0x85304a:0x181,_0x52f69a:0x15d,_0x33fe53:0x171,_0x1051ce:0x158,_0x4d62de:0x188,_0x43ced1:0x174,_0x18cfdc:0x175,_0x45b5d0:0x162},_0x6b0589=_0x2139b4,_0x24256b=createFakeContact(_0x147e86),_0x22b245=getBotName();try{await _0x59564f[_0x6b0589(0x158)](_0x43ba90,{'react':{'text':'⏳','key':_0x147e86[_0x6b0589(_0x5aad65._0x3cde15)]}});const _0x39fc7a=_0x147e86[_0x6b0589(_0x5aad65._0x1c3219)]?.[_0x6b0589(0x173)]||_0x147e86[_0x6b0589(0x177)]?.[_0x6b0589(_0x5aad65._0x44021d)]?.[_0x6b0589(_0x5aad65._0x588991)]||_0x147e86[_0x6b0589(0x177)]?.[_0x6b0589(0x183)]?.[_0x6b0589(_0x5aad65._0x488f4d)]||'';if(!_0x39fc7a[_0x6b0589(_0x5aad65._0x1cff86)]('\x20'))return await _0x59564f[_0x6b0589(0x158)](_0x43ba90,{'text':_0x6b0589(0x15a)+_0x22b245+_0x6b0589(0x164)},{'quoted':_0x24256b});const _0x166f4f=_0x39fc7a[_0x6b0589(0x163)]('\x20'),_0x39a6ea=_0x166f4f[_0x6b0589(0x18a)](0x1)[_0x6b0589(_0x5aad65._0x82ed1a)]('\x20')[_0x6b0589(_0x5aad65._0xc83fdc)]();if(!_0x39a6ea)return await _0x59564f['sendMessage'](_0x43ba90,{'text':_0x6b0589(0x15a)+_0x22b245+_0x6b0589(_0x5aad65._0x305fb3)},{'quoted':_0x24256b});if(_0x39a6ea[_0x6b0589(_0x5aad65._0x44a92e)]>0x3e8)return await _0x59564f[_0x6b0589(0x158)](_0x43ba90,{'text':_0x6b0589(_0x5aad65._0x1337d7)+_0x22b245+_0x6b0589(0x16c)},{'quoted':_0x24256b});await _0x59564f[_0x6b0589(_0x5aad65._0x3e9dae)](_0x6b0589(0x187),_0x43ba90);const _0x493ead=_0x6b0589(_0x5aad65._0x85304a)+encodeURIComponent(_0x39a6ea),_0x4f7912=await axios[_0x6b0589(0x15b)](_0x493ead,{'timeout':0x7530}),_0xa13a88=_0x4f7912['data'];if(!_0xa13a88?.['status']||!_0xa13a88?.['result'])throw new Error(_0x6b0589(_0x5aad65._0x52f69a));await _0x59564f[_0x6b0589(0x158)](_0x43ba90,{'react':{'text':'✅','key':_0x147e86[_0x6b0589(_0x5aad65._0x33fe53)]}});const _0x4b6a14=_0xa13a88[_0x6b0589(0x15f)][_0x6b0589(_0x5aad65._0xc83fdc)]();await _0x59564f[_0x6b0589(_0x5aad65._0x1051ce)](_0x43ba90,{'text':_0x6b0589(0x15a)+_0x22b245+_0x6b0589(_0x5aad65._0x4d62de)+_0x4b6a14},{'quoted':_0x24256b}),await _0x59564f[_0x6b0589(_0x5aad65._0x1051ce)](_0x43ba90,{'react':{'text':'📚','key':_0x147e86[_0x6b0589(0x171)]}});}catch(_0x5caafb){console['error'](_0x6b0589(0x16e),_0x5caafb),await _0x59564f['sendMessage'](_0x43ba90,{'react':{'text':'❌','key':_0x147e86[_0x6b0589(0x171)]}});let _0xf973f3=_0x6b0589(0x184);if(_0x5caafb[_0x6b0589(0x160)]?.[_0x6b0589(0x17c)]===0x194)_0xf973f3=_0x6b0589(_0x5aad65._0x43ced1);else{if(_0x5caafb[_0x6b0589(0x177)][_0x6b0589(_0x5aad65._0x1cff86)](_0x6b0589(_0x5aad65._0x18cfdc))||_0x5caafb[_0x6b0589(_0x5aad65._0x45b5d0)]===_0x6b0589(0x165))_0xf973f3=_0x6b0589(0x16f);else{if(_0x5caafb['code']===_0x6b0589(0x15e))_0xf973f3=_0x6b0589(0x189);else{if(_0x5caafb['response']?.[_0x6b0589(0x17c)]===0x1ad)_0xf973f3='✦\x20Too\x20many\x20requests';else _0x5caafb[_0x6b0589(0x160)]?.[_0x6b0589(0x17c)]>=0x1f4&&(_0xf973f3=_0x6b0589(0x185));}}}await _0x59564f[_0x6b0589(_0x5aad65._0x1051ce)](_0x43ba90,{'text':_0xf973f3},{'quoted':_0x24256b});}}module[_0x2139b4(0x166)]=perplexityCommand;
+async function perplexityCommand(sock, chatId, message) {
+    const fake = createFakeContact(message);
+    const botName = getBotName();
+    
+    try {
+        // Send initial reaction
+        await sock.sendMessage(chatId, {
+            react: { text: '⏳', key: message.key }
+        });
+
+        const text = message.message?.conversation || 
+                     message.message?.extendedTextMessage?.text || 
+                     message.message?.imageMessage?.caption || 
+                     '';
+        
+        if (!text.includes(' ')) {
+            return await sock.sendMessage(chatId, {
+                text: `✦ *${botName}* Perplexity AI\n\nUse: .perplexity <question>\nExample: .perplexity what is AI`
+            }, { quoted: fake });
+        }
+
+        const parts = text.split(' ');
+        const query = parts.slice(1).join(' ').trim();
+
+        if (!query) {
+            return await sock.sendMessage(chatId, {
+                text: `✦ *${botName}*\nProvide a question`
+            }, { quoted: fake });
+        }
+
+        if (query.length > 1000) {
+            return await sock.sendMessage(chatId, {
+                text: `✦ *${botName}*\nQuestion too long (max 1000 chars)`
+            }, { quoted: fake });
+        }
+
+        // Update presence to "typing"
+        await sock.sendPresenceUpdate('composing', chatId);
+
+        // Fetch AI response using Perplexity API
+        const apiUrl = `https://apiskeith.top/ai/perplexity?q=${encodeURIComponent(query)}`;
+        const response = await axios.get(apiUrl, { timeout: 30000 });
+        const apiData = response.data;
+
+        if (!apiData?.status || !apiData?.result) {
+            throw new Error("Perplexity AI failed to generate response!");
+        }
+
+        // Send success reaction
+        await sock.sendMessage(chatId, {
+            react: { text: '✅', key: message.key }
+        });
+
+        // Send clean response with signature
+        const aiResponse = apiData.result.trim();
+        await sock.sendMessage(chatId, { 
+            text: `✦ *${botName}* - am know invisible 🔥\n\n${aiResponse}` 
+        }, { quoted: fake });
+
+        // Final reaction
+        await sock.sendMessage(chatId, {
+            react: { text: '📚', key: message.key }
+        });
+
+    } catch (error) {
+        console.error("Perplexity AI command error:", error);
+
+        await sock.sendMessage(chatId, {
+            react: { text: '❌', key: message.key }
+        });
+
+        let errorMessage = "✦ Failed to generate response";
+        
+        if (error.response?.status === 404) {
+            errorMessage = '✦ Service unavailable';
+        } else if (error.message.includes('timeout') || error.code === 'ECONNABORTED') {
+            errorMessage = '✦ Request timeout';
+        } else if (error.code === 'ENOTFOUND') {
+            errorMessage = '✦ Network error';
+        } else if (error.response?.status === 429) {
+            errorMessage = '✦ Too many requests';
+        } else if (error.response?.status >= 500) {
+            errorMessage = '✦ Server error';
+        }
+
+        await sock.sendMessage(chatId, {
+            text: errorMessage
+        }, { quoted: fake });
+    }
+}
+
+module.exports = perplexityCommand;

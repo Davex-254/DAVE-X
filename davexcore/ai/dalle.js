@@ -1,4 +1,4 @@
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 const axios = require('axios');
 
 async function dalleCommand(sock, chatId, message, args) {

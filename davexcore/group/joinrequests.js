@@ -1,104 +1,121 @@
-const { getBotName, createFakeContact } = require('../../lib/fakeContact');
+const { getBotName, createFakeContact } = require('../../davelib/fakeContact');
 
 async function acceptCommand(sock, chatId, senderId, args, message, fake) {
-    if (!args || !args.trim()) {
-        await sock.sendMessage(chatId, {
-            text: '*Usage:* .accept 254712345678\n\nProvide the phone number of the person whose join request you want to approve.'
-        }, { quoted: fake });
-        return;
-    }
-
+    const botName = getBotName();
     try {
-        const number = args.replace(/[^0-9]/g, '');
-        const userJid = `${number}@s.whatsapp.net`;
-
-        await sock.groupRequestParticipantsUpdate(chatId, [userJid], 'approve');
-        await sock.sendMessage(chatId, {
-            text: `Approved @${number}'s join request!`,
-            mentions: [userJid]
-        }, { quoted: fake });
-    } catch (error) {
-        if (error.message?.includes('not-found') || error.message?.includes('item-not-found')) {
-            await sock.sendMessage(chatId, { text: 'No pending join request found for this number.' }, { quoted: fake });
-        } else {
-            await sock.sendMessage(chatId, { text: `Failed to accept request: ${error.message}` }, { quoted: fake });
+        if (!chatId.endsWith('@g.us')) {
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | This command only works in groups.`
+            }, { quoted: fake });
         }
-    }
-}
 
-async function rejectCommand(sock, chatId, senderId, args, message, fake) {
-    if (!args || !args.trim()) {
-        await sock.sendMessage(chatId, {
-            text: '*Usage:* .reject 254712345678\n\nProvide the phone number of the person whose join request you want to decline.'
-        }, { quoted: fake });
-        return;
-    }
-
-    try {
-        const number = args.replace(/[^0-9]/g, '');
-        const userJid = `${number}@s.whatsapp.net`;
-
-        await sock.groupRequestParticipantsUpdate(chatId, [userJid], 'reject');
-        await sock.sendMessage(chatId, {
-            text: `Rejected @${number}'s join request.`,
-            mentions: [userJid]
-        }, { quoted: fake });
-    } catch (error) {
-        if (error.message?.includes('not-found') || error.message?.includes('item-not-found')) {
-            await sock.sendMessage(chatId, { text: 'No pending join request found for this number.' }, { quoted: fake });
-        } else {
-            await sock.sendMessage(chatId, { text: `Failed to reject request: ${error.message}` }, { quoted: fake });
-        }
-    }
-}
-
-async function acceptAllCommand(sock, chatId, senderId, message, fake) {
-    try {
         const pendingRequests = await sock.groupRequestParticipantsList(chatId);
 
         if (!pendingRequests || pendingRequests.length === 0) {
-            await sock.sendMessage(chatId, { text: 'No pending join requests found.' }, { quoted: fake });
-            return;
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | No pending join requests in this group.`
+            }, { quoted: fake });
+        }
+
+        if (args && args.trim()) {
+            const number = args.replace(/[^0-9]/g, '');
+            const userJid = `${number}@s.whatsapp.net`;
+            const isPending = pendingRequests.some(r => r.jid === userJid || r.jid.startsWith(number));
+            if (!isPending) {
+                return sock.sendMessage(chatId, {
+                    text: `✦ *${botName}* | No pending request found for +${number}.`
+                }, { quoted: fake });
+            }
+            await sock.groupRequestParticipantsUpdate(chatId, [userJid], 'approve');
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | ✅ Approved @${number}'s join request!`,
+                mentions: [userJid]
+            }, { quoted: fake });
         }
 
         const jids = pendingRequests.map(r => r.jid);
         await sock.groupRequestParticipantsUpdate(chatId, jids, 'approve');
 
+        const names = pendingRequests.slice(0, 10).map(r => `+${r.jid.split('@')[0]}`).join(', ');
+        const extra = jids.length > 10 ? ` and ${jids.length - 10} more` : '';
+
         await sock.sendMessage(chatId, {
-            text: `Approved all ${jids.length} pending join request(s)!`
+            text: `✦ *${botName}* | ✅ Approved *${jids.length}* pending request(s)!\n\n${names}${extra}`
         }, { quoted: fake });
+
     } catch (error) {
-        await sock.sendMessage(chatId, { text: `Failed to accept all requests: ${error.message}` }, { quoted: fake });
+        console.error('acceptCommand error:', error.message);
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ❌ Failed to approve: ${error.message}`
+        }, { quoted: fake });
     }
 }
 
-async function rejectAllCommand(sock, chatId, senderId, message, fake) {
+async function rejectCommand(sock, chatId, senderId, args, message, fake) {
+    const botName = getBotName();
     try {
+        if (!chatId.endsWith('@g.us')) {
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | This command only works in groups.`
+            }, { quoted: fake });
+        }
+
         const pendingRequests = await sock.groupRequestParticipantsList(chatId);
 
         if (!pendingRequests || pendingRequests.length === 0) {
-            await sock.sendMessage(chatId, { text: 'No pending join requests found.' }, { quoted: fake });
-            return;
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | No pending join requests in this group.`
+            }, { quoted: fake });
+        }
+
+        if (args && args.trim()) {
+            const number = args.replace(/[^0-9]/g, '');
+            const userJid = `${number}@s.whatsapp.net`;
+            const isPending = pendingRequests.some(r => r.jid === userJid || r.jid.startsWith(number));
+            if (!isPending) {
+                return sock.sendMessage(chatId, {
+                    text: `✦ *${botName}* | No pending request found for +${number}.`
+                }, { quoted: fake });
+            }
+            await sock.groupRequestParticipantsUpdate(chatId, [userJid], 'reject');
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | ❌ Rejected @${number}'s join request.`,
+                mentions: [userJid]
+            }, { quoted: fake });
         }
 
         const jids = pendingRequests.map(r => r.jid);
         await sock.groupRequestParticipantsUpdate(chatId, jids, 'reject');
 
         await sock.sendMessage(chatId, {
-            text: `Rejected all ${jids.length} pending join request(s).`
+            text: `✦ *${botName}* | ❌ Rejected all *${jids.length}* pending request(s).`
         }, { quoted: fake });
+
     } catch (error) {
-        await sock.sendMessage(chatId, { text: `Failed to reject all requests: ${error.message}` }, { quoted: fake });
+        console.error('rejectCommand error:', error.message);
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ❌ Failed to reject: ${error.message}`
+        }, { quoted: fake });
     }
 }
 
+async function acceptAllCommand(sock, chatId, senderId, message, fake) {
+    return acceptCommand(sock, chatId, senderId, '', message, fake);
+}
+
+async function rejectAllCommand(sock, chatId, senderId, message, fake) {
+    return rejectCommand(sock, chatId, senderId, '', message, fake);
+}
+
 async function listRequestsCommand(sock, chatId, senderId, message, fake) {
+    const botName = getBotName();
     try {
         const pendingRequests = await sock.groupRequestParticipantsList(chatId);
 
         if (!pendingRequests || pendingRequests.length === 0) {
-            await sock.sendMessage(chatId, { text: 'No pending join requests.' }, { quoted: fake });
-            return;
+            return sock.sendMessage(chatId, {
+                text: `✦ *${botName}* | No pending join requests.`
+            }, { quoted: fake });
         }
 
         const requestList = pendingRequests.map((r, i) => {
@@ -109,11 +126,13 @@ async function listRequestsCommand(sock, chatId, senderId, message, fake) {
         const mentions = pendingRequests.map(r => r.jid);
 
         await sock.sendMessage(chatId, {
-            text: `*PENDING JOIN REQUESTS*\n\nTotal: *${pendingRequests.length}* request(s)\n\n${requestList}\n\n_Use .accept <number> or .acceptall to approve_\n_Use .reject <number> or .rejectall to decline_`,
-            mentions: mentions
+            text: `✦ *${botName}* | Pending Join Requests\n\nTotal: *${pendingRequests.length}*\n\n${requestList}\n\n_Use .accept or .acceptall to approve all_\n_Use .accept <number> to approve one_`,
+            mentions
         }, { quoted: fake });
     } catch (error) {
-        await sock.sendMessage(chatId, { text: `Failed to list requests: ${error.message}` }, { quoted: fake });
+        await sock.sendMessage(chatId, {
+            text: `✦ *${botName}* | ❌ Failed to list requests: ${error.message}`
+        }, { quoted: fake });
     }
 }
 

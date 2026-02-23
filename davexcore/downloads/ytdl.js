@@ -1,7 +1,7 @@
 const yts = require('yt-search');
 const axios = require('axios');
 const fetch = require('node-fetch');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function ytplayCommand(sock, chatId, message) {
     const fkontak = createFakeContact(message);
 

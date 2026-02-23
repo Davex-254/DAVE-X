@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function vnCommand(sock, chatId, message, text, prefix) {
     try {
         const fake = createFakeContact(message);

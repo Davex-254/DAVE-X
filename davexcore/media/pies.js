@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 const BASE = 'https://shizoapi.onrender.com/api/pies';
 const VALID_COUNTRIES = ['china', 'indonesia', 'japan', 'korea', 'hijab'];

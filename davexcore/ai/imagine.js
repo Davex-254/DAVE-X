@@ -1,6 +1,6 @@
 const axios = require('axios');
-const { fetchBuffer } = require('../../lib/myfunc');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { fetchBuffer } = require('../../davelib/myfunc');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 // Fake contact creator 😜
 async function imagineCommand(sock, chatId, message) {

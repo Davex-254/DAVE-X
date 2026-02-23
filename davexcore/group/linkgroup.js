@@ -1,4 +1,4 @@
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function linkgroupCommand(sock, chatId, message) {
     const fkontak = createFakeContact(message);

@@ -1,9 +1,7 @@
 const fetch = require('node-fetch');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
-
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function handleTranslateCommand(sock, chatId, message, match) {
-    const fake = createFakeContact(message);
-    const botName = getBotName();
+    const fkontak = createFakeContact(message);
     
     try {
         await sock.sendPresenceUpdate('composing', chatId);
@@ -24,8 +22,9 @@ async function handleTranslateCommand(sock, chatId, message, match) {
             const args = match.trim().split(' ');
             if (args.length < 2) {
                 return sock.sendMessage(chatId, {
-                    text: `✦ *${botName}* Translate\n\nUse: .translate <text> <lang>\nExample: .translate hello fr\n\nLanguages:\n› fr (French)\n› es (Spanish)\n› de (German)\n› it (Italian)\n› pt (Portuguese)\n› ru (Russian)\n› ja (Japanese)\n› ko (Korean)\n› zh (Chinese)`,
-                }, { quoted: fake });
+                    text: `TRANSLATOR\n\nUsage:\n.translate <text> <lang> or .trt <text> <lang>\nExample: .translate hello fr\n\nLanguages:\nfr French, es Spanish, de German\nit Italian, pt Portuguese, ru Russian\nja Japanese, ko Korean, zh Chinese`,
+                    quoted: fkontak
+                });
             }
 
             lang = args.pop();
@@ -34,8 +33,9 @@ async function handleTranslateCommand(sock, chatId, message, match) {
 
         if (!textToTranslate) {
             return sock.sendMessage(chatId, {
-                text: `✦ *${botName}*\nNo text to translate`,
-            }, { quoted: fake });
+                text: 'No text to translate.',
+                quoted: fkontak
+            });
         }
 
         let translatedText = null;
@@ -82,14 +82,17 @@ async function handleTranslateCommand(sock, chatId, message, match) {
         }
 
         await sock.sendMessage(chatId, {
-            text: `✦ *${botName}*\n\n${translatedText}`,
-        }, { quoted: fake });
+            text: `${translatedText}`,
+        }, {
+            quoted: fkontak
+        });
 
     } catch (error) {
         console.error('Translate error:', error);
         await sock.sendMessage(chatId, {
-            text: `✦ *${botName}*\nFailed to translate`,
-        }, { quoted: fake });
+            text: 'Failed to translate.',
+            quoted: fkontak
+        });
     }
 }
 

@@ -1,5 +1,5 @@
-const isAdmin = require('../../lib/isAdmin');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const isAdmin = require('../../davelib/isAdmin');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function hijackCommand(sock, chatId, message, senderId) {
     try {
         const fake = createFakeContact(message);

@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const { exec } = require('child_process');
 const path = require('path');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function emojimixCommand(sock, chatId, msg) {
     try {
         const fake = createFakeContact(msg);

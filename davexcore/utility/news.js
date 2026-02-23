@@ -1,8 +1,37 @@
-/*
- * Protected by ROMEK JA OBFUSCATOR
- * Protection Level: Basic
- * Generated: 2026-02-21T12:45:30.436Z
- * Warning: Unauthorized reverse engineering is prohibited
- */
+const axios = require('axios');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
-const _0x1b33dc=_0x498d;function _0x1238(){const _0x3e958b=['zgnKnZiWytzMmtKXnguYzdLKyMe5nZKWyZe4ogmWogm','lI4U','nLjKvLHdwa','yxj0AwnSzxm','4PYMiezHAwXLzcb0BYbMzxrJAcbUzxDZ','z2v0','DgL0Bgu','C2vUze1LC3nHz2u','mxjevLznAG','mtyXntjny2fgruy','mtbPCgnJwuu','mJy4nJe0mhbqyuvvqW','nta3mtbutMrJAhm','otuYnteXmMnvuvzODq','zM9YrwfJAa','zgvZy3jPChrPB24','C3vIC3rYAw5N','nZm3mtaZBgnZv2Xu','nJqXmZq4nuvUy0PxDq','mtC4ndq0mfPkyM5OzG','lIaQ','n3HNwfDnwa','Ahr0Chm6lY9UzxDZyxbPlM9YzY92mI90B3aTAgvHzgXPBMvZp2nVDw50CNK9DxmMyxbPs2v5pq','rxjYB3iGzMv0y2HPBMCGBMv3CZO','mteYmZf4z2nOv1i','zgf0yq','BgvUz3rO','lI4VlI4VBgLIl2zHA2vdB250ywn0'];_0x1238=function(){return _0x3e958b;};return _0x1238();}(function(_0x3c534e,_0x3587e5){const _0x69f123={_0x370409:0x74,_0xd28b35:0x7d,_0x1e7fa2:0x7e,_0x4e9a16:0x8a,_0x240fd7:0x77},_0x1224a1=_0x498d,_0x85fff9=_0x3c534e();while(!![]){try{const _0x5a2103=-parseInt(_0x1224a1(_0x69f123._0x370409))/0x1*(parseInt(_0x1224a1(0x78))/0x2)+-parseInt(_0x1224a1(_0x69f123._0xd28b35))/0x3+-parseInt(_0x1224a1(0x7f))/0x4+-parseInt(_0x1224a1(_0x69f123._0x1e7fa2))/0x5*(-parseInt(_0x1224a1(_0x69f123._0x4e9a16))/0x6)+-parseInt(_0x1224a1(0x81))/0x7*(-parseInt(_0x1224a1(0x79))/0x8)+-parseInt(_0x1224a1(_0x69f123._0x240fd7))/0x9*(-parseInt(_0x1224a1(0x76))/0xa)+parseInt(_0x1224a1(0x84))/0xb*(-parseInt(_0x1224a1(0x75))/0xc);if(_0x5a2103===_0x3587e5)break;else _0x85fff9['push'](_0x85fff9['shift']());}catch(_0x5a53ef){_0x85fff9['push'](_0x85fff9['shift']());}}}(_0x1238,0xa61ac));function _0x498d(_0x1dac82,_0x50d84c){const _0x123880=_0x1238();return _0x498d=function(_0x498df8,_0x23f678){_0x498df8=_0x498df8-0x73;let _0xff6bb2=_0x123880[_0x498df8];if(_0x498d['PzmdYp']===undefined){var _0xeed8a1=function(_0x308eb5){const _0x560d80='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0xa29ed6='',_0x2cc1a2='';for(let _0x26c23a=0x0,_0x577f51,_0x4cddfb,_0x165a6b=0x0;_0x4cddfb=_0x308eb5['charAt'](_0x165a6b++);~_0x4cddfb&&(_0x577f51=_0x26c23a%0x4?_0x577f51*0x40+_0x4cddfb:_0x4cddfb,_0x26c23a++%0x4)?_0xa29ed6+=String['fromCharCode'](0xff&_0x577f51>>(-0x2*_0x26c23a&0x6)):0x0){_0x4cddfb=_0x560d80['indexOf'](_0x4cddfb);}for(let _0x71e04=0x0,_0x418d2d=_0xa29ed6['length'];_0x71e04<_0x418d2d;_0x71e04++){_0x2cc1a2+='%'+('00'+_0xa29ed6['charCodeAt'](_0x71e04)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2cc1a2);};_0x498d['mFYprl']=_0xeed8a1,_0x1dac82=arguments,_0x498d['PzmdYp']=!![];}const _0x2c275c=_0x123880[0x0],_0x505baa=_0x498df8+_0x2c275c,_0x387adf=_0x1dac82[_0x505baa];return!_0x387adf?(_0xff6bb2=_0x498d['mFYprl'](_0xff6bb2),_0x1dac82[_0x505baa]=_0xff6bb2):_0xff6bb2=_0x387adf,_0xff6bb2;},_0x498d(_0x1dac82,_0x50d84c);}const axios=require('axios'),{createFakeContact,getBotName}=require(_0x1b33dc(0x87));async function newsCommand(_0x308eb5,_0x560d80,_0xa29ed6){const _0x30b974={_0x29cb82:0x88,_0x215a33:0x8d,_0x1443f1:0x82,_0x71f2fc:0x7a,_0x3ca32f:0x73},_0x13254e={_0x106a4f:0x80,_0x449d03:0x8e,_0x3e9bb7:0x7c,_0x19d6d6:0x86,_0x2a70df:0x89},_0x1c2b5e=_0x1b33dc,_0x2cc1a2=createFakeContact(_0xa29ed6),_0x26c23a=getBotName();try{const _0x577f51=_0x1c2b5e(_0x30b974._0x29cb82),_0x4cddfb=await axios[_0x1c2b5e(_0x30b974._0x215a33)](_0x1c2b5e(_0x30b974._0x1443f1)+_0x577f51),_0x165a6b=_0x4cddfb[_0x1c2b5e(0x85)][_0x1c2b5e(0x8b)]['slice'](0x0,0x5);let _0x71e04='✦\x20*TOP\x20NEWS*\x0a╭─────────────────\x0a│\x0a';_0x165a6b[_0x1c2b5e(_0x30b974._0x71f2fc)]((_0x418d2d,_0x1311dd)=>{const _0x37e525=_0x1c2b5e;_0x71e04+='│\x20'+(_0x1311dd+0x1)+_0x37e525(_0x13254e._0x106a4f)+_0x418d2d[_0x37e525(_0x13254e._0x449d03)]+'*\x0a',_0x418d2d['description']&&(_0x71e04+='│\x20'+_0x418d2d[_0x37e525(0x7b)][_0x37e525(_0x13254e._0x3e9bb7)](0x0,0x64)+(_0x418d2d['description'][_0x37e525(_0x13254e._0x19d6d6)]>0x64?_0x37e525(_0x13254e._0x2a70df):'')+'\x0a'),_0x71e04+='│\x0a';}),_0x71e04+='╰─────────────────',await _0x308eb5['sendMessage'](_0x560d80,{'text':_0x71e04},{'quoted':_0x2cc1a2});}catch(_0x5e7aa4){console['error'](_0x1c2b5e(0x83),_0x5e7aa4),await _0x308eb5[_0x1c2b5e(_0x30b974._0x3ca32f)](_0x560d80,{'text':_0x1c2b5e(0x8c)},{'quoted':_0x2cc1a2});}}module['exports']=newsCommand;
+async function newsCommand(sock, chatId, message) {
+    const fake = createFakeContact(message);
+    const botName = getBotName();
+    
+    try {
+        const apiKey = 'dcd720a6f1914e2d9dba9790c188c08c';  // Replace with your NewsAPI key
+        const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
+        const articles = response.data.articles.slice(0, 5); // Get top 5 articles
+        
+        let newsMessage = `✦ *TOP NEWS*
+╭─────────────────
+│
+`;
+        articles.forEach((article, index) => {
+            newsMessage += `│ ${index + 1}. *${article.title}*\n`;
+            if (article.description) {
+                newsMessage += `│ ${article.description.substring(0, 100)}${article.description.length > 100 ? '...' : ''}\n`;
+            }
+            newsMessage += `│\n`;
+        });
+        
+        newsMessage += `╰─────────────────`;
+        
+        await sock.sendMessage(chatId, { text: newsMessage }, { quoted: fake });
+        
+    } catch (error) {
+        console.error('Error fetching news:', error);
+        await sock.sendMessage(chatId, { 
+            text: `✦ Failed to fetch news` 
+        }, { quoted: fake });
+    }
+}
+
+module.exports = newsCommand;

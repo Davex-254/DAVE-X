@@ -3,7 +3,7 @@ const path = require('path');
 const { downloadMediaMessage } = require('@whiskeysockets/baileys');
 const webp = require('node-webpmux');
 const crypto = require('crypto');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 async function takeCommand(sock, chatId, message, args) {
     const fkontak = createFakeContact(message);
     

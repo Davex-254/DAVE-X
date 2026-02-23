@@ -5,9 +5,9 @@ const fs = require('fs');
 const path = require('path');
 const webp = require('node-webpmux');
 const crypto = require('crypto');
-const settings = require('../../settings');
+const settings = require('../../daveset');
 const { stickercropFromBuffer } = require('../media/stickercrop');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 // Fake contact creator 😜
 async function convertBufferToStickerWebp(inputBuffer, isAnimated, cropSquare) {

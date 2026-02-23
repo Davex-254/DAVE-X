@@ -1,5 +1,5 @@
 const db = require('../../Database/database');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 async function unbanCommand(sock, chatId, message) {
     const senderId = message.key.participant || message.key.remoteJid;

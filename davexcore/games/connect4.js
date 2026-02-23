@@ -1,5 +1,5 @@
-const ConnectFour = require('../../lib/connect4');
-const { createFakeContact, getBotName } = require('../../lib/fakeContact');
+const ConnectFour = require('../../davelib/connect4');
+const { createFakeContact, getBotName } = require('../../davelib/fakeContact');
 
 // Store games globally
 const connectFourGames = {};
