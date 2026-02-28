@@ -20,6 +20,7 @@
     "@whiskeysockets/baileys": "^7.0.0-rc.9",
     "awesome-phonenumber": "^7.8.0",
     "axios": "^1.13.5",
+    "adm-zip": "^0.5.16",
     "better-sqlite3": "^12.6.2",
     "chalk": "^4.1.2",
     "cheerio": "^1.2.0",
