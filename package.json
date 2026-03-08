@@ -1,6 +1,6 @@
 {
   "name": "DAVE X",
-  "version": "4.0.3",
+  "version": "1.0.3",
   "description": "JavaScript decryption and encoding utility library",
   "main": "index.js",
   "scripts": {
