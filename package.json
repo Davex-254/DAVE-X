@@ -27,7 +27,7 @@
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "@adiwajshing/keyed-db": "^0.2.4",
-    "@whiskeysockets/baileys": "github:Davex-254/davebaileys"
+    "@whiskeysockets/baileys": "github:Davex-254/davebaileys",
     "archiver": "^7.0.1",
     "acrcloud": "^1.4.0",
     "api-dylux": "^1.8.3",
