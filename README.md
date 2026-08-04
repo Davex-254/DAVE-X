@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.ibb.co/NnFRdWxm/upload-1771680267489-4b4129c8-jpg.jpg" alt="Dave-X" width="300"/>
+  <img src="https://i.ibb.co/NnFRdWxm/upload-1771680267489-4b4129c8-jpg.jpg" alt="DAVE-X" width="300"/>
 </p>
 
 <p align="center">
@@ -7,11 +7,11 @@
     <img src="https://img.shields.io/badge/Pair_Site-Get_Code-purple?style=for-the-badge&logo=whatsapp" alt="Pair Site" width="200">
   </a>
 
-  <a href="https://github.com/DaveTech-Incr/DAVE-X/fork">
+  <a href="https://github.com/Davex-254/DAVE-X/fork">
     <img src="https://img.shields.io/badge/Fork-DAVE--X-blue?style=for-the-badge&logo=github" alt="Fork DAVE-X" width="200">
   </a>
 
-  <a href="https://github.com/DaveTech-Incr/DAVE-X/archive/refs/heads/main.zip">
+  <a href="https://github.com/Davex-254/DAVE-X/archive/refs/heads/main.zip">
     <img src="https://img.shields.io/badge/Download-Zip-green?style=for-the-badge&logo=download" alt="Direct Download ZIP" width="200">
   </a>
 </p>
@@ -24,29 +24,29 @@
   <table>
     <tr>
       <!-- Heroku -->
-      <td><a href="https://dashboard.heroku.com/new?template=https://github.com/DaveTech-Incr/DAVE-X" target="_blank">
+      <td><a href="https://dashboard.heroku.com/new?template=https://github.com/Davex-254/DAVE-X" target="_blank">
   <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=rocket&logoColor=white"/>
 </a></td>
       <!-- Replit -->
-      <td><a href="https://replit.com/github/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Replit-F26207?style=for-the-badge&logo=replit&logoColor=white&labelColor=000000"/></a></td>
+      <td><a href="https://replit.com/github/Davex-254/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Replit-F26207?style=for-the-badge&logo=replit&logoColor=white&labelColor=000000"/></a></td>
     </tr>
     <tr>
       <!-- Koyeb -->
-      <td><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Koyeb-FF009D?style=for-the-badge&logo=koyeb&logoColor=white&labelColor=000000"/></a></td>
+      <td><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/Davex-254/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Koyeb-FF009D?style=for-the-badge&logo=koyeb&logoColor=white&labelColor=000000"/></a></td>
       <!-- Railway -->
-      <td><a href="https://railway.app/new/template?template=https://github.com/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Railway-FF8700?style=for-the-badge&logo=railway&logoColor=white&labelColor=000000"/></a></td>
+      <td><a href="https://railway.app/new/template?template=https://github.com/Davex-254/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Railway-FF8700?style=for-the-badge&logo=railway&logoColor=white&labelColor=000000"/></a></td>
     </tr>
     <tr>
       <!-- Render -->
-      <td><a href="https://render.com/deploy?repo=https://github.com/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white&labelColor=000000&color=007FFF"/></a></td>
+      <td><a href="https://render.com/deploy?repo=https://github.com/Davex-254/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white&labelColor=000000&color=007FFF"/></a></td>
       <!-- Netlify -->
-      <td><a href="https://app.netlify.com/start/deploy?repository=https://github.com/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Netlify-CC00FF?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=000000"/></a></td>
+      <td><a href="https://app.netlify.com/start/deploy?repository=https://github.com/Davex-254/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Netlify-CC00FF?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=000000"/></a></td>
     </tr>
     <tr>
       <!-- Katabump (spanning both columns) -->
       <td colspan="2" align="center"><a href="https://dashboard.katabump.com/auth/login#ce51a9" target="_blank"><img src="https://img.shields.io/badge/Katabump-FF6B6B?style=for-the-badge&logo=cloudflare&logoColor=white"/></a></td>
     </tr>
-  8宫
+  </table>
 </div>
 
 ## 🎥 TUTORIAL
