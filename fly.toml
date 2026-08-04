@@ -1,0 +1,30 @@
+# Fly.io — free tier: 3 shared-CPU VMs, 256 MB RAM each
+# Deploy: fly launch  (first time)  |  fly deploy  (updates)
+# Set secrets: fly secrets set SESSION_ID=xxx
+
+app            = "davex-bot"          # change to your unique app name
+primary_region = "iad"                # iad=US-East | lhr=Europe | sin=Asia
+
+[build]
+
+[env]
+  NODE_ENV = "production"
+
+[http_service]
+  internal_port       = 5000
+  force_https         = true
+  auto_stop_machines  = "stop"
+  auto_start_machines = true
+  min_machines_running = 0            # set to 1 to stay always-on (uses free allowance)
+
+  [[http_service.checks]]
+    grace_period = "15s"
+    interval     = "30s"
+    method       = "GET"
+    path         = "/health"
+    timeout      = "10s"
+
+[[vm]]
+  memory   = "512mb"
+  cpu_kind = "shared"
+  cpus     = 1

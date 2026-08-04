@@ -32,8 +32,10 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@whiskeysockets/baileys": "npm:davexbaileys@2.5.24",
+      "@whiskeysockets/baileys": "^v7.0.0-rc.9",
     "archiver": "^7.0.1",
+    "adm-zip": "^0.5.16",
+    "javascript-obfuscator": "^5.4.1",
     "awesome-phonenumber": "^7.8.0",
     "axios": "^1.13.5",
     "better-sqlite3": "^12.6.2",
@@ -87,8 +89,6 @@
   "overrides": {
     "jimp": "^1.6.0"
   },
-  "devDependencies": {
-    "adm-zip": "^0.5.16",
-    "javascript-obfuscator": "^5.4.1"
-  }
+  "devDependencies": {}
+    
 }

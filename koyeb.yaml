@@ -1,0 +1,23 @@
+name: davex-bot
+type: web
+
+build:
+  docker:
+    dockerfile: Dockerfile
+
+ports:
+  - port: 3000
+    protocol: http
+
+health_checks:
+  - path: /health
+    port: 3000
+    grace_period: 15s
+    interval: 30s
+    timeout: 10s
+
+env:
+  - key: NODE_ENV
+    value: production
+  - key: SESSION_ID
+    value: ""
