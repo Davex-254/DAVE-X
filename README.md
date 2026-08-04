@@ -3,8 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="Tuma session id
-https://session-incr.onrender.com/">
+  <a href="https://session-incr.onrender.com/">
     <img src="https://img.shields.io/badge/Pair_Site-Get_Code-purple?style=for-the-badge&logo=whatsapp" alt="Pair Site" width="200">
   </a>
 
