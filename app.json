@@ -1,17 +1,27 @@
 {
-  "name": "DAVE-X",
-  "description": "DAVE X WhatsApp Bot",
-  "repository": "https://github.com/Davex-254/DAVE-X",
-  "stack": "container",
+  "name": "Dave X",
+  "description": "Dave X, your friendly assistant!",
+  "logo": "https://i.ibb.co/nqsRcKDB/Xploader4.jpg",
+  "keywords": [],
+  "repository": "https://github.com/Dark-Xploit/CypherX",
+  "stack": "heroku-24",
   "addons": [
     {
-      "plan": "heroku-postgresql:mini"
+      "plan": "heroku-postgresql"
     }
   ],
-  "env": {
-    "SESSION_ID": {
-      "description": "Must begin with 'DAVE-X:~'. Get it from your bot.",
-      "required": true
+  "scripts": {
+    "start": "node index.js"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
     }
-  }
+  ]
 }
