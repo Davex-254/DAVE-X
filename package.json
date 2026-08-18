@@ -1,34 +1,40 @@
 {
   "name": "dave-x",
-  "version": "1.4.1",
-  "description": "DAVE-X — Multi-platform WhatsApp Bot built on Baileys",
+  "version": "1.5.1",
+  "description": "DAVE-X launcher and multi-platform WhatsApp bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --trace-warnings index.js"
+    "start:gc": "node --expose-gc index.js",
+    "start:low": "node --max-old-space-size=256 --optimize-for-size index.js",
+    "start:mid": "node --max-old-space-size=512 index.js",
+    "start:high": "node --max-old-space-size=1024 index.js",
+    "start:trace": "node --trace-warnings index.js",
+    "dev": "node --trace-warnings index.js",
+    "panel": "npm install --legacy-peer-deps && node index.js",
+    "install:deps": "npm install --legacy-peer-deps",
+    "install:force": "npm install --force"
   },
-  "keywords": [
-    "whatsapp-bot",
-    "baileys",
-    "dave-x",
-    "davetech"
-  ],
+  "keywords": ["whatsapp-bot", "baileys", "dave-x", "davetech"],
   "author": "davetech-254",
   "license": "ISC",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@whiskeysockets/baileys": "^v7.0.0-rc.9",
-    "archiver": "^7.0.1",
+    "@whiskeysockets/baileys": "npm:davexbaileys@latest",
     "adm-zip": "^0.5.16",
-    "javascript-obfuscator": "^5.4.1",
+    "archiver": "^7.0.1",
     "awesome-phonenumber": "^7.8.0",
-    "axios": "^1.13.5",
+    "axios": "^1.7.9",
     "better-sqlite3": "12.8.0",
     "chalk": "^4.1.2",
     "chalk-animation": "^2.0.3",
     "cheerio": "^1.2.0",
     "dotenv": "^17.3.1",
     "express": "^4.21.2",
+    "ffmpeg-static": "^5.2.0",
     "figlet": "^1.10.0",
     "file-type": "^16.5.4",
     "fluent-ffmpeg": "^2.1.3",
@@ -40,8 +46,10 @@
     "gradient-string": "^3.0.0",
     "gtts": "^0.2.1",
     "human-readable": "^0.2.1",
+    "javascript-obfuscator": "^5.4.1",
     "jimp": "^1.6.0",
     "lodash": "^4.17.23",
+    "mathjs": "^13.0.0",
     "moment-timezone": "^0.6.0",
     "mumaker": "^2.0.0",
     "node-cache": "^5.1.2",
@@ -50,12 +58,12 @@
     "node-id3": "^0.2.9",
     "node-telegram-bot-api": "^0.67.0",
     "node-webpmux": "^3.2.1",
-    "openai": "^6.27.0",
+    "openai": "^4.86.1",
     "p-queue": "^9.1.0",
     "pastebin-js": "^1.0.6",
     "pdfkit": "^0.18.0",
     "pg": "^8.18.0",
-    "pino": "^10.3.1",
+    "pino": "^9.6.0",
     "qrcode": "^1.5.4",
     "qrcode-terminal": "^0.12.0",
     "randomstring": "^1.3.1",
@@ -69,10 +77,10 @@
     "webp-converter": "^2.3.3",
     "yargs": "^18.0.0",
     "yt-search": "^2.13.1",
-    "ytdl-core": "^4.11.5"
+    "ytdl-core": "npm:@distube/ytdl-core@latest"
   },
   "overrides": {
-    "jimp": "^1.6.0"
-  },
-  "devDependencies": {}
+    "jimp": "^1.6.0",
+    "form-data": "^4.0.5"
+  }
 }

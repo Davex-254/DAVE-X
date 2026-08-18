@@ -6,12 +6,12 @@ build:
     dockerfile: Dockerfile
 
 ports:
-  - port: 3000
+  - port: 5000
     protocol: http
 
 health_checks:
   - path: /health
-    port: 3000
+    port: 5000
     grace_period: 15s
     interval: 30s
     timeout: 10s

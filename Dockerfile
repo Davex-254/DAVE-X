@@ -5,10 +5,10 @@ RUN apt-get update && apt-get install -y ffmpeg imagemagick webp && apt-get clea
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm ci --legacy-peer-deps
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 5000
 
 CMD ["npm", "start"]
