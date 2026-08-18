@@ -1,25 +1,20 @@
 {
-  "name": "dave-x",
+  "name": "Dave X",
   "version": "1.5.1",
-  "description": "DAVE-X launcher and multi-platform WhatsApp bot",
-  "main": "index.js",
+  "description": "The best Whatsapp bot",
+  "type": "commonjs",
+  "main": "main.js",
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
   "scripts": {
     "start": "node index.js",
-    "start:gc": "node --expose-gc index.js",
-    "start:low": "node --max-old-space-size=256 --optimize-for-size index.js",
-    "start:mid": "node --max-old-space-size=512 index.js",
-    "start:high": "node --max-old-space-size=1024 index.js",
-    "start:trace": "node --trace-warnings index.js",
-    "dev": "node --trace-warnings index.js",
-    "panel": "npm install --legacy-peer-deps && node index.js",
-    "install:deps": "npm install --legacy-peer-deps",
-    "install:force": "npm install --force"
-  },
-  "keywords": ["whatsapp-bot", "baileys", "dave-x", "davetech"],
-  "author": "davetech-254",
-  "license": "ISC",
-  "engines": {
-    "node": ">=20.19.0"
+    "dev": "nodemon cypher.js",
+    "stop": "pkill -f node",
+    "restart": "pkill -f node && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
