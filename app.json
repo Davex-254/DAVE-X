@@ -1,0 +1,26 @@
+{
+  "name": "Dave X",
+  "description": "Dave X; your powerful WhatsApp multi-session bot!",
+  "keywords": ["whatsapp", "bot", "davex"],
+  "repository": "https://github.com/Davex-254/DAVE-X",
+  "stack": "heroku-24",
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+  "env": {
+    "SESSION_ID": {
+      "description": "Your session ID for the Dave X bot.",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
