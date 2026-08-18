@@ -1,19 +1,25 @@
 FROM node:lts
 
-RUN apt-get update && apt-get install -y \
-    ffmpeg \
-    imagemagick \
-    webp \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*   # <-- keeps image smaller
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp && apt-get clean
 
+# Set working directory
 WORKDIR /app
 
+# Copy package files
 COPY package*.json ./
-RUN npm install --legacy-peer-deps   # <-- add this back if you had peer dep issues before
 
+# Install dependencies
+RUN npm install && npm cache clean --force
+
+# Copy application code
 COPY . .
 
+# Expose port
 EXPOSE 3000
 
-CMD ["npm", "start"]
+# Set environment
+ENV NODE_ENV production
+
+# Run command
+CMD ["npm", "run", "start"]
