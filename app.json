@@ -5,12 +5,12 @@
   "stack": "container",
   "addons": [
     {
-      "plan": "heroku-postgresql"
+      "plan": "heroku-postgresql:mini"
     }
   ],
   "env": {
     "SESSION_ID": {
-      "description": "Must begin with 'DAVE-X:~'.",
+      "description": "Must begin with 'DAVE-X:~'. Get it from your bot.",
       "required": true
     }
   }
