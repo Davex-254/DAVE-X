@@ -14,7 +14,6 @@
     "stop": "pkill -f node",
     "restart": "pkill -f node && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
