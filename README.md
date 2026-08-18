@@ -1,98 +1,100 @@
-<p align="center">
-  <img src="https://i.ibb.co/NnFRdWxm/upload-1771680267489-4b4129c8-jpg.jpg" alt="Dave-X" width="300"/>
-</p>
+# DAVE-X
+
+A reliable multi-platform launcher for the **DAVE-X WhatsApp Bot**, built for straightforward deployment and unattended operation.
 
 <p align="center">
-  <a href="Tuma session id
-https://session-incr.onrender.com/">
-    <img src="https://img.shields.io/badge/Pair_Site-Get_Code-purple?style=for-the-badge&logo=whatsapp" alt="Pair Site" width="200">
+  <a href="https://github.com/Davex-254/DAVE-X">
+    <img src="https://img.shields.io/badge/GitHub-Davex--254%2FDAVE--X-181717?style=for-the-badge&logo=github" alt="GitHub repository">
   </a>
-
-  <a href="https://github.com/DaveTech-Incr/DAVE-X/fork">
-    <img src="https://img.shields.io/badge/Fork-DAVE--X-blue?style=for-the-badge&logo=github" alt="Fork DAVE-X" width="200">
+  <a href="https://github.com/Davex-254/DAVE-X/archive/refs/heads/main.zip">
+    <img src="https://img.shields.io/badge/Download-Source_ZIP-2ea44f?style=for-the-badge&logo=github" alt="Download source ZIP">
   </a>
-
-  <a href="https://github.com/DaveTech-Incr/DAVE-X/archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/badge/Download-Zip-green?style=for-the-badge&logo=download" alt="Direct Download ZIP" width="200">
+  <a href="https://session-incr.onrender.com/">
+    <img src="https://img.shields.io/badge/Session-Get_ID-6f42c1?style=for-the-badge&logo=whatsapp" alt="Get session ID">
   </a>
 </p>
 
-## 📡 DEPLOYMENT SITES
+## Overview
 
-<p align="center">Deploy your <strong>DAVE-X Bot</strong> with one click on your favorite hosting platforms.</p>
+DAVE-X provides a stable launcher workflow for hosting the bot on supported Node.js platforms. It handles startup, environment configuration, connection recovery, release updates, and graceful restarts while keeping the operator experience simple.
 
-<div align="center">
-  <table>
-    <tr>
-      <!-- Heroku -->
-      <td><a href="https://dashboard.heroku.com/new?template=https://github.com/DaveTech-Incr/DAVE-X" target="_blank">
-  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=rocket&logoColor=white"/>
-</a></td>
-      <!-- Replit -->
-      <td><a href="https://replit.com/github/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Replit-F26207?style=for-the-badge&logo=replit&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
-    <tr>
-      <!-- Koyeb -->
-      <td><a href="https://app.koyeb.com/deploy?type=git&repository=github.com/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Koyeb-FF009D?style=for-the-badge&logo=koyeb&logoColor=white&labelColor=000000"/></a></td>
-      <!-- Railway -->
-      <td><a href="https://railway.app/new/template?template=https://github.com/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Railway-FF8700?style=for-the-badge&logo=railway&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
-    <tr>
-      <!-- Render -->
-      <td><a href="https://render.com/deploy?repo=https://github.com/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white&labelColor=000000&color=007FFF"/></a></td>
-      <!-- Netlify -->
-      <td><a href="https://app.netlify.com/start/deploy?repository=https://github.com/DaveTech-Incr/DAVE-X" target="_blank"><img src="https://img.shields.io/badge/Netlify-CC00FF?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=000000"/></a></td>
-    </tr>
-    <tr>
-      <!-- Katabump (spanning both columns) -->
-      <td colspan="2" align="center"><a href="https://dashboard.katabump.com/auth/login#ce51a9" target="_blank"><img src="https://img.shields.io/badge/Katabump-FF6B6B?style=for-the-badge&logo=cloudflare&logoColor=white"/></a></td>
-    </tr>
-  8宫
-</div>
+The launcher is designed for **Node.js 20.19 or newer** and uses SQLite for local bot persistence. It does not require PostgreSQL for standard deployments.
 
-## 🎥 TUTORIAL
+## One-click deployment
 
-<p align="center">
-  <a href="https://youtu.be/wJKMV0BSqpE?si=6Y11rPD0t2ykoxB8" target="_blank">
-    <img src="https://img.shields.io/badge/Watch-Tutorial-red?style=for-the-badge&logo=youtube&logoColor=white" width="200">
-  </a>
-</p>
+| Platform | Deploy |
+|---|---|
+| Heroku | [Deploy to Heroku](https://heroku.com/deploy?template=https://github.com/Davex-254/DAVE-X) |
+| Replit | [Open in Replit](https://replit.com/github/Davex-254/DAVE-X) |
+| Koyeb | [Deploy on Koyeb](https://app.koyeb.com/deploy?type=git&repository=github.com/Davex-254/DAVE-X) |
+| Railway | [Deploy on Railway](https://railway.app/new/template?template=https://github.com/Davex-254/DAVE-X) |
+| Render | [Deploy on Render](https://render.com/deploy?repo=https://github.com/Davex-254/DAVE-X) |
 
-<p align="center">
-  <strong>How to deploy DAVE-X on panel in 2026</strong><br>
-  Step-by-step video guide to help you get your bot running smoothly.
-</p>
+> **Repository:** [github.com/Davex-254/DAVE-X](https://github.com/Davex-254/DAVE-X)
 
-<p align="center">
-  <a href="https://youtu.be/wJKMV0BSqpE?si=6Y11rPD0t2ykoxB8" target="_blank">
-    <img src="https://img.shields.io/badge/▶️_Click_Here_to_Watch-FF0000?style=for-the-badge&logo=youtube&logoColor=white" width="300">
-  </a>
-</p>
+## Required configuration
 
----
+Set the following environment variable in your hosting provider before starting the service:
 
-### 👨‍💻 Author: **Dave Tech**
+| Variable | Required | Description |
+|---|---:|---|
+| `SESSION_ID` | Yes | Your DAVE-X session credential. It must begin with `DAVE-X:~`. |
 
-> Built with passion by Dave Tech. Enjoying the bot? Check out my movies site for entertainment!  
-> 🎬 **Visit:** [**DAVEXMOVIES - Stream Movies & TV Shows**](https://www.davex-moviezone.zone.id)
+For local hosting, place the value in a `.env` file in the project directory. Do not commit credentials to GitHub or include them in a ZIP shared with other users.
 
-## 📌 Important Notes
+## Local installation
 
-- Set `SESSION_ID` through the hosting platform environment settings. The launcher creates a blank root `.env` only when needed; credentials are not packaged.
-- The hidden runtime contains only the active bot source. Launcher data remains at the project root: `session/`, `storage/`, `backups/`, `tmp/`, `downloads/`, and `previous-bot*/`.
-- A changed `SESSION_ID` intentionally replaces the old session; the launcher does not preserve obsolete session credentials for automatic restoration.
-- `package-lock.json` is a dependency-resolution lockfile, not runtime data. It keeps the launcher and bot dependency versions reproducible. `javascript-obfuscator` is retained because the bot’s encryption command requires it.
-- Downloaded releases are pinned to the verified GitLab commit, and runtime artifacts such as `.env`, databases, logs, media, temporary files, archives, and `node_modules/` are removed before activation.
-- Check the tutorial video above for detailed deployment guidance
+```bash
+git clone https://github.com/Davex-254/DAVE-X.git
+cd DAVE-X
+npm install --legacy-peer-deps
+npm start
+```
 
-## ⭐ Support
+The launcher also provides alternative start profiles for hosts with different memory limits:
 
-If you find this bot useful, please consider:
-- Starring the repository ⭐
-- Forking for your own use
-- Sharing with others
-- Watching the tutorial and leaving a comment
+```bash
+npm run start:low
+npm run start:mid
+npm run start:high
+```
 
----
+Use `npm run dev` only when actively diagnosing a deployment. Production deployments should use `npm start` or the platform’s standard start command.
 
-**© 2026 Dave Tech. All rights reserved.**
+## Session setup
+
+1. Open the [DAVE-X session service](https://session-incr.onrender.com/).
+2. Generate or retrieve your session credential.
+3. Add it to the host as `SESSION_ID`.
+4. Start or redeploy the service.
+5. Confirm that the application health page responds on the port supplied by the hosting platform.
+
+When a new session credential is intentionally supplied, the launcher replaces the previous connection state before reconnecting.
+
+## Deployment notes
+
+The included deployment files provide platform-specific defaults for Heroku, Render, Railway, Koyeb, Fly.io, and Replit. If your provider exposes a `PORT` variable, the launcher uses the platform-assigned value automatically.
+
+For reliable operation, use a persistent service or worker instead of a short-lived request-only function. The bot needs an always-on Node.js process to maintain its WhatsApp connection.
+
+## Troubleshooting
+
+| Symptom | Recommended action |
+|---|---|
+| The service starts but does not connect | Confirm that `SESSION_ID` is present, valid, and begins with `DAVE-X:~`. |
+| The deployment cannot find the repository | Verify that the deployment template uses [Davex-254/DAVE-X](https://github.com/Davex-254/DAVE-X) and that the repository URL has no old owner name. |
+| The process repeatedly restarts | Check the host logs for the first error, confirm Node.js 20.19+, and verify that the host has enough memory. |
+| The service is online but the health page is unavailable | Ensure the process listens on the platform-provided `PORT` and that the host is not using a conflicting fixed port. |
+| A session must be replaced | Update `SESSION_ID` and restart the service so the new credential is loaded cleanly. |
+
+## Support and updates
+
+Use the repository for the latest launcher source, deployment definitions, and release updates:
+
+- [GitHub repository](https://github.com/Davex-254/DAVE-X)
+- [Download the latest ZIP](https://github.com/Davex-254/DAVE-X/archive/refs/heads/main.zip)
+- [DAVE-X session service](https://session-incr.onrender.com/)
+
+## License
+
+© 2026 Dave Tech. All rights reserved.
