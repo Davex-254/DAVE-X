@@ -18,13 +18,13 @@ A reliable multi-platform launcher for the **DAVE-X WhatsApp Bot**, built for st
 
 DAVE-X provides a stable launcher workflow for hosting the bot on supported Node.js platforms. It handles startup, environment configuration, connection recovery, release updates, and graceful restarts while keeping the operator experience simple.
 
-The launcher is designed for **Node.js 20.19 or newer** and uses SQLite for local bot persistence. It does not require PostgreSQL for standard deployments.
+The launcher is designed for **Node.js 20.19 or newer**. SQLite is used for local persistence, while supported hosted deployments such as Heroku can provision and expose PostgreSQL through `DATABASE_URL`.
 
 ## One-click deployment
 
 | Platform | Deploy |
 |---|---|
-| Heroku | [Deploy to Heroku](https://heroku.com/deploy?template=https://github.com/Davex-254/DAVE-X) |
+| Heroku | [Deploy to Heroku](https://www.heroku.com/deploy?template=https%3A%2F%2Fgithub.com%2FDavex-254%2FDAVE-X) |
 | Replit | [Open in Replit](https://replit.com/github/Davex-254/DAVE-X) |
 | Koyeb | [Deploy on Koyeb](https://app.koyeb.com/deploy?type=git&repository=github.com/Davex-254/DAVE-X) |
 | Railway | [Deploy on Railway](https://railway.app/new/template?template=https://github.com/Davex-254/DAVE-X) |
