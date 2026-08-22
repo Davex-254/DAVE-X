@@ -24,7 +24,7 @@ The launcher is designed for **Node.js 20.19 or newer**. SQLite is used for loca
 
 | Platform | Deploy |
 |---|---|
-| Heroku | [Deploy to Heroku](https://www.heroku.com/deploy?template=https%3A%2F%2Fgithub.com%2FDavex-254%2FDAVE-X) |
+| Heroku | [Deploy to Heroku](https://www.heroku.com/deploy?template=https%3A%2F%2Fgithub.com%2FDavex-254%2FDAVE-X%2Ftree%2Fmain) |
 | Replit | [Open in Replit](https://replit.com/github/Davex-254/DAVE-X) |
 | Koyeb | [Deploy on Koyeb](https://app.koyeb.com/deploy?type=git&repository=github.com/Davex-254/DAVE-X) |
 | Railway | [Deploy on Railway](https://railway.app/new/template?template=https://github.com/Davex-254/DAVE-X) |
@@ -82,7 +82,7 @@ For reliable operation, use a persistent service or worker instead of a short-li
 | Symptom | Recommended action |
 |---|---|
 | The service starts but does not connect | Confirm that `SESSION_ID` is present, valid, and begins with `DAVE-X:~`. |
-| The deployment cannot find the repository | Verify that the deployment template uses [Davex-254/DAVE-X](https://github.com/Davex-254/DAVE-X) and that the repository URL has no old owner name. |
+| The deployment cannot find the repository | Use the explicit [Heroku deploy URL](https://www.heroku.com/deploy?template=https%3A%2F%2Fgithub.com%2FDavex-254%2FDAVE-X%2Ftree%2Fmain), confirm the GitHub repository is public, and ensure no old owner or fork name is in the URL. |
 | The process repeatedly restarts | Check the host logs for the first error, confirm Node.js 20.19+, and verify that the host has enough memory. |
 | The service is online but the health page is unavailable | Ensure the process listens on the platform-provided `PORT` and that the host is not using a conflicting fixed port. |
 | A session must be replaced | Update `SESSION_ID` and restart the service so the new credential is loaded cleanly. |
