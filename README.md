@@ -18,7 +18,6 @@ A multi-platform launcher for the **DAVE-X WhatsApp Bot** — built for straight
 <table>
 <tr>
 <td align="center" width="50%">
-  <img src="./assets/server1.png" width="90" alt="Server 1 Logo"><br><br>
   <b>Server 1 — Dave Tech</b><br>
   <sub>Primary session service</sub><br><br>
   <a href="https://davextechwebservice.zone.id/main">
@@ -26,7 +25,6 @@ A multi-platform launcher for the **DAVE-X WhatsApp Bot** — built for straight
   </a>
 </td>
 <td align="center" width="50%">
-  <img src="./assets/server2.png" width="90" alt="Server 2 Logo"><br><br>
   <b>Server 2 — Render</b><br>
   <sub>Backup session service</sub><br><br>
   <a href="https://session-incr.onrender.com/">
@@ -35,8 +33,6 @@ A multi-platform launcher for the **DAVE-X WhatsApp Bot** — built for straight
 </td>
 </tr>
 </table>
-
-> **Save the logos** as `assets/server1.png` and `assets/server2.png` in your repo. If the images are missing, GitHub just shows a broken icon — the links still work.
 
 ---
 
